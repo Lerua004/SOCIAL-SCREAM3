@@ -1,0 +1,148 @@
+
+
+/* Базовые настройки body */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('../images/second_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column; /* Размещаем элементы по вертикали */
+    justify-content: center;
+    align-items: center;
+    font-family: 'FiraSans', sans-serif;
+    text-align: center; /* Центрируем текст */
+    position: relative; /* Для позиционирования лиц */
+    overflow: hidden; /* Скрываем выходящие за пределы экрана элементы */
+}
+
+/* Текст над прямоугольником */
+.header-text {
+    font-size: 1.7rem; /* Размер текста */
+    color: white; /* Цвет текста */
+    margin-bottom: 4vh; /* Отступ снизу */
+    line-height: 1.5; /* Интервал между строками */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Тень для лучшей читаемости */
+}
+
+/* Белый прямоугольник */
+.center-box {
+    width: 90%; /* Адаптивная ширина */
+    max-width: 400px; /* Максимальная ширина */
+    height: 70%; /* Адаптивная высота */
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* Размещаем элементы вертикально */
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень */
+    position: relative; /* Для z-index */
+    box-sizing: border-box; /* Учитываем padding в размерах */
+}
+
+/* Верхний контейнер */
+.upper-container {
+    display: flex;
+    align-items: center; /* Выравнивание по центру по вертикали */
+    justify-content: space-between; /* Распределение элементов */
+    width: 100%; /* Занимает всю ширину родителя */
+    padding: 10px 0; /* Отступы сверху и снизу */
+    border-bottom: 1px solid black; /* Линия под контейнером */
+}
+
+/* Серый кружок */
+.avatar {
+    width: 40px; /* Ширина кружка */
+    height: 40px; /* Высота кружка */
+    background-color: #D9D9D9;
+    border-radius: 50%; /* Делаем круглым */
+    margin-right: 10px; /* Отступ справа */
+    margin-left: 1vw;
+}
+
+/* Текстовое поле */
+.username-input {
+    flex-grow: 1; /* Занимает оставшееся пространство */
+    height: 40px; /* Высота поля */
+    border: none; /* Убираем границу */
+    background-color: transparent; /* Прозрачный фон */
+    font-size: 0.8rem; /* Размер текста */
+    outline: none; /* Убираем обводку при фокусе */
+    color: black; /* Цвет текста */
+    margin-right: 10px; /* Отступ справа */
+}
+
+/* Подсказка (placeholder) */
+.username-input::placeholder {
+    color: #ccc; /* Цвет подсказки */
+}
+
+/* Контейнер для трех точек */
+.dots {
+    display: flex;
+    gap: 5px; /* Расстояние между точками */
+    margin-right: 1.5vw;
+    cursor: pointer;
+}
+
+/* Точки */
+.dot {
+    width: 3px; /* Размер точки */
+    height: 3px; /* Размер точки */
+    background-color: black; /* Цвет точки */
+    border-radius: 50%; /* Делаем круглой */
+}
+
+/* Нижний контейнер */
+.lower-container {
+    display: flex;
+    align-items: center; /* Выравнивание по центру по вертикали */
+    justify-content: space-between; /* Распределение элементов */
+    width: 100%; /* Занимает всю ширину родителя */
+    padding: 7px 0; /* Отступы сверху и снизу */
+    border-top: 1px solid black; /* Линия над контейнером */
+}
+
+/* Левый блок (три иконки с текстами) */
+.left-icons {
+    display: flex;
+    align-items: center; /* Выравнивание по центру */
+    gap: 15px; /* Расстояние между группами иконок */
+    margin-left: 0.5vw;
+}
+
+/* Иконки */
+.icon {
+    width: 25px; /* Унифицированный размер иконки */
+    height: 25px; /* Унифицированный размер иконки */
+    cursor: pointer;
+    vertical-align: middle; /* Выравнивание по центру относительно текста */
+}
+
+/* Текст рядом с иконками */
+.icon-text {
+    font-size: 0.9rem; /* Размер текста */
+    color: black; /* Цвет текста */
+    line-height: 1; /* Убираем лишний интервал между строками */
+    vertical-align: middle; /* Выравнивание по центру относительно иконки */
+}
+
+/* Группа иконок (лайки, комментарии, отправка) */
+.icon-group {
+    display: flex;
+    align-items: center; /* Выравнивание по центру */
+    gap: 5px; /* Расстояние между иконкой и текстом */
+}
+
+/* Правый блок (иконка закладки) */
+.right-icon {
+    margin-right: 1vw; /* Отступ справа */
+}
+
+.comment {
+    width: 21px;
+    height: 21px;
+}

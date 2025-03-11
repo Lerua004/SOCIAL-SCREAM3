@@ -1,0 +1,58 @@
+// Находим все лица
+const faces = document.querySelectorAll('.face');
+const centerBox = document.querySelector('.center-box');
+const backButton = document.querySelector('.back-button');
+
+// Параметры анимации
+let angles = Array.from(faces, () => Math.random() * 360); // Начальные углы для каждого лица
+let stoppedFaceIndex = null; // Индекс остановленного эмодзи (изначально null)
+
+// Функция для обновления вращения лиц
+function updateFaceRotations() {
+    faces.forEach((face, index) => {
+        // Если эмодзи не остановлен, продолжаем его вращать
+        if (index !== stoppedFaceIndex) {
+            // Увеличиваем угол для каждого лица
+            angles[index] = (angles[index] + 1) % 360;
+
+            // Применяем вращение через transform
+            face.style.transform = `rotate(${angles[index]}deg)`;
+        }
+    });
+
+    // Зацикливаем анимацию
+    requestAnimationFrame(updateFaceRotations);
+}
+
+// Обработчик клика на прямоугольник
+centerBox.addEventListener('click', () => {
+    if (stoppedFaceIndex === null) {
+        // Выбираем рандомный эмодзи
+        stoppedFaceIndex = Math.floor(Math.random() * faces.length);
+
+        // Останавливаем его
+        const randomFace = faces[stoppedFaceIndex];
+        randomFace.classList.add('stopped');
+
+        // Изменяем стиль прямоугольника
+        centerBox.classList.add('stopped');
+
+        // Показываем крестик
+        backButton.classList.add('visible');
+    }
+});
+
+// Обработчик клика на крестик
+backButton.addEventListener('click', () => {
+    window.location.href = 'index.html?visitedPage2=true'; // Возвращаемся на первую страницу
+});
+
+// Ждем загрузки всех изображений
+Promise.all(Array.from(faces).map(face => {
+    if (!face.complete) {
+        return new Promise(resolve => face.onload = resolve);
+    }
+})).then(() => {
+    // Запускаем анимацию после загрузки всех изображений
+    updateFaceRotations();
+});
