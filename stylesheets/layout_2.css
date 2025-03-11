@@ -28,8 +28,8 @@ body {
 
 /* Белый прямоугольник */
 .center-box {
-    width: 400px; /* Ширина прямоугольника */
-    height: 200px; /* Высота прямоугольника */
+    width: 300px; /* Ширина прямоугольника */
+    height: 150px; /* Высота прямоугольника */
     background-color: white;
     display: flex;
     justify-content: center;
@@ -43,8 +43,8 @@ body {
 
 /* Текст "STOP" */
 .stop-text {
-    font-size: 5rem; /* Размер текста */
-    color: black;
+    font-size: 7rem; /* Размер текста */
+    color: blue;
     text-transform: uppercase; /* Все буквы заглавные */
     letter-spacing: 5px; /* Расстояние между буквами */
 }
@@ -74,14 +74,14 @@ body {
 /* Пример позиционирования лиц */
 .face:nth-child(1) { top: 8%; left: 5%; }
 .face:nth-child(2) { top: 4%; left: 34%; }
-.face:nth-child(3) { bottom: 0%; right: 4%; }
-.face:nth-child(4) { top: 22%; right: 0%; transform: translateX(-50%); }
+.face:nth-child(3) { bottom: 5%; right: 4%; }
+.face:nth-child(4) { top: 10%; right: 5%; transform: translateX(-50%); }
 .face:nth-child(5) { bottom: 7%; right: 29%; }
-.face:nth-child(6) { bottom: 28%; right: 12%; }
+.face:nth-child(6) { bottom: 30%; right: 15%; }
 .face:nth-child(7) { bottom: 10%; left: 6%; }
-.face:nth-child(8) { bottom: 3%; left: 35%; }
+.face:nth-child(8) { bottom: 4%; left: 35%; }
 .face:nth-child(9) { top: 5%; right: 24%; }
-.face:nth-child(10) { top: 36%; left: 14%; }
+.face:nth-child(10) { top: 36%; left: 20%; }
 
 /* Крестик для возврата */
 .back-button {
@@ -118,4 +118,15 @@ body {
 
 .center-box.stopped .stop-text {
     color: black; /* Черный текст */
+}
+
+/* Стиль для остановленного эмодзи */
+.face.stopped {
+    animation: none !important; /* Отключаем любые анимации */
+    transform: rotate(0deg) !important; /* Устанавливаем начальное положение */
+}
+
+/* Анимация возврата в исходное положение */
+.return-to-origin {
+    animation: returnToOrigin 1s ease-in-out forwards;
 }

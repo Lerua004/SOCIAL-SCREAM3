@@ -11,3 +11,18 @@
     50% { transform: scale(1.1) translate(-50%, -50%); }
     100% { transform: scale(1) translate(-50%, -50%); }
 }
+
+@keyframes returnToOrigin {
+    from {
+        transform: rotate(var(--current-angle)); /* Текущий угол */
+    }
+    to {
+        transform: rotate(0deg); /* Исходное положение */
+    }
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

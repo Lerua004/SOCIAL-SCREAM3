@@ -4,19 +4,19 @@ const centerBox = document.querySelector('.center-box');
 const backButton = document.querySelector('.back-button');
 
 // Параметры анимации
-let angles = Array.from(faces, () => Math.random() * 360); // Начальные углы для каждого лица
+let globalAngle = 0; // Общий угол для всех эмодзи
 let stoppedFaceIndex = null; // Индекс остановленного эмодзи (изначально null)
 
 // Функция для обновления вращения лиц
 function updateFaceRotations() {
+    // Увеличиваем общий угол
+    globalAngle += 2; // Увеличиваем скорость вращения (быстрее)
+
     faces.forEach((face, index) => {
         // Если эмодзи не остановлен, продолжаем его вращать
         if (index !== stoppedFaceIndex) {
-            // Увеличиваем угол для каждого лица
-            angles[index] = (angles[index] + 1) % 360;
-
             // Применяем вращение через transform
-            face.style.transform = `rotate(${angles[index]}deg)`;
+            face.style.transform = `rotate(${globalAngle}deg)`;
         }
     });
 
@@ -33,6 +33,9 @@ centerBox.addEventListener('click', () => {
         // Останавливаем его
         const randomFace = faces[stoppedFaceIndex];
         randomFace.classList.add('stopped');
+
+        // Добавляем класс для анимации возврата
+        randomFace.classList.add('return-to-origin');
 
         // Изменяем стиль прямоугольника
         centerBox.classList.add('stopped');

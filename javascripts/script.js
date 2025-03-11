@@ -68,7 +68,7 @@ if (visitedPage3) {
             }
         }, 150);
 
-    }, 5000);
+    }, 3000);
 
     // Обработчик клика на руки
     hands.addEventListener('click', () => {
