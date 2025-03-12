@@ -11,6 +11,7 @@ let textAnimation;
 const urlParams = new URLSearchParams(window.location.search);
 const visitedPage2 = urlParams.get('visitedPage2') === 'true';
 const visitedPage3 = urlParams.get('visitedPage3') === 'true';
+const visitedPage4 = urlParams.get('visitedPage4') === 'true';
 
 if (visitedPage3) {
     // Если пользователь вернулся с третьей страницы
@@ -32,6 +33,15 @@ if (visitedPage3) {
     mouth.addEventListener('click', () => {
         window.location.href = 'page3.html?visitedPage2=true'; // Переход на третью страницу
     });
+} else if (visitedPage4) {
+    // Если пользователь вернулся со второй страницы
+    hands.classList.add('dimmed'); // Затемняем руки
+    hands.classList.remove('pulse'); // Убираем пульсацию рук
+    mouth.classList.add('dimmed'); // Добавляем пульсацию рту
+    mouth.classList.remove('pulse'); // Убираем пульсацию рук
+    face.classList.add('dimmed'); // Добавляем пульсацию рту
+    face.classList.remove('pulse'); // Убираем пульсацию рук
+    
 } else {
     // Начальное состояние
     setTimeout(() => {

@@ -50,7 +50,7 @@ body {
 }
 
 /* Текст над прямоугольником */
-.header-text {
+.header-text-post {
     font-size: 1.5rem; /* Размер текста */
     color: white; /* Цвет текста */
     margin-bottom: 4vh; /* Отступ снизу */
@@ -59,7 +59,7 @@ body {
 }
 
 /* Белый прямоугольник */
-.center-box {
+.center-box-post {
     width: 70%; /* Адаптивная ширина */
     max-width: 340px; /* Максимальная ширина */
     height: 70%; /* Адаптивная высота */
@@ -73,7 +73,7 @@ body {
     box-sizing: border-box; /* Учитываем padding в размерах */
 }
 
-.center-box img {
+.center-box-post img {
     animation: fadeIn 1s ease-in-out;
 }
 
@@ -94,7 +94,7 @@ body {
     background-color: #D9D9D9;
     border-radius: 50%; /* Делаем круглым */
     margin-right: 10px; /* Отступ справа */
-    margin-left: 1vw;
+    margin-left: 0.5vw;
 }
 
 /* Текстовое поле */

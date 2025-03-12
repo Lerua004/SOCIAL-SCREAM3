@@ -1,5 +1,5 @@
 // Находим все лица
-const faces = document.querySelectorAll('.face');
+const faces = document.querySelectorAll('.emoji');
 const centerBox = document.querySelector('.center-box');
 const backButton = document.querySelector('.back-button');
 

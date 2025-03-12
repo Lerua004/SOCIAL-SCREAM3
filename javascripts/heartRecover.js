@@ -3,7 +3,7 @@ const input = document.querySelector('.username-input');
 const hearts = document.querySelectorAll('.heart');
 const likeIcon = document.querySelector('.icon-group img[alt="Like"]');
 const likeCount = document.querySelector('.icon-group .icon-text');
-const centerBox = document.querySelector('.center-box');
+const centerBox = document.querySelector('.center-box-post');
 const backButton = document.querySelector('.back-button');
 
 let isUsernameEntered = false; // Флаг для проверки ввода никнейма

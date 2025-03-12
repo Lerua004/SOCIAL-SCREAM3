@@ -63,7 +63,7 @@ body {
 }
 
 /* Стили для лиц */
-.face {
+.emoji {
     position: absolute;
     width: 11vw; /* Фиксированный размер лиц */
     height: auto; /* Сохраняем пропорции */
@@ -72,16 +72,16 @@ body {
 }
 
 /* Пример позиционирования лиц */
-.face:nth-child(1) { top: 8%; left: 5%; }
-.face:nth-child(2) { top: 4%; left: 34%; }
-.face:nth-child(3) { bottom: 5%; right: 4%; }
-.face:nth-child(4) { top: 10%; right: 5%; transform: translateX(-50%); }
-.face:nth-child(5) { bottom: 7%; right: 29%; }
-.face:nth-child(6) { bottom: 30%; right: 15%; }
-.face:nth-child(7) { bottom: 10%; left: 6%; }
-.face:nth-child(8) { bottom: 4%; left: 35%; }
-.face:nth-child(9) { top: 5%; right: 24%; }
-.face:nth-child(10) { top: 36%; left: 20%; }
+.emoji:nth-child(1) { top: 8%; left: 5%; }
+.emoji:nth-child(2) { top: 4%; left: 34%; }
+.emoji:nth-child(3) { bottom: 5%; right: 4%; }
+.emoji:nth-child(4) { top: 10%; right: 5%; transform: translateX(-50%); }
+.emoji:nth-child(5) { bottom: 7%; right: 29%; }
+.emoji:nth-child(6) { bottom: 30%; right: 15%; }
+.emoji:nth-child(7) { bottom: 10%; left: 6%; }
+.emoji:nth-child(8) { bottom: 4%; left: 35%; }
+.emoji:nth-child(9) { top: 5%; right: 24%; }
+.emoji:nth-child(10) { top: 36%; left: 20%; }
 
 /* Крестик для возврата */
 .back-button {
@@ -121,7 +121,7 @@ body {
 }
 
 /* Стиль для остановленного эмодзи */
-.face.stopped {
+.emoji.stopped {
     animation: none !important; /* Отключаем любые анимации */
     transform: rotate(0deg) !important; /* Устанавливаем начальное положение */
 }
