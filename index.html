@@ -5,23 +5,268 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Scream</title>
     <link rel="stylesheet" href="./stylesheets/style.css">
-    <link rel="stylesheet" href="./stylesheets/layout_1.css">
+    <link rel="stylesheet" href="./stylesheets/layout.css">
 </head>
 <body>
-    <!-- Оверлей для затемнения -->
-    <div class="overlay"></div>
+    
+    <!-- Страница 1 -->
+    <div class="page page-1 active">
+        <div class="overlay"></div>
+        <div class="text-container">
+            <span class="typed-text"></span>
+        </div>
 
-    <!-- Текстовый блок -->
-    <div class="text-container">
-        <span class="typed-text"></span>
+        <img src="./images/face.png" alt="Face" class="face" id="face">
+        <img src="./images/mouth.png" alt="Mouth" class="mouth" id="mouth">
+        <img src="./images/hands.png" alt="Hands" class="hands" id="hands">
     </div>
 
-    <!-- Изображения -->
-    <img src="./images/face.png" alt="Face" class="face" id="face">
-    <img src="./images/mouth.png" alt="Mouth" class="mouth" id="mouth">
-    <img src="./images/hands.png" alt="Hands" class="hands" id="hands">
+    <!-- Страница 2 -->
+    <div class="page page-2">
+        <div class="page-2-container">
+
+            <!-- Крестик для возврата -->
+            <div class="back-button-2">
+                <img src="./images/back.png" alt="Back" />
+            </div>
+
+            <!-- Текст над прямоугольником -->
+            <div class="header-text">
+                Нажми на кнопку и узнай,<br>какой ты сегодня эмоджи
+            </div>
+
+            <!-- Белый прямоугольник с текстом -->
+            <div class="center-box">
+                <span class="stop-text">STOP</span>
+            </div>
+
+            <!-- Контейнер для лиц -->
+            <div class="faces-container">
+                <img src="./images/faces/face1.png" alt="Face 1" class="emoji">
+                <img src="./images/faces/face2.png" alt="Face 2" class="emoji">
+                <img src="./images/faces/face3.png" alt="Face 3" class="emoji">
+                <img src="./images/faces/face4.png" alt="Face 4" class="emoji">
+                <img src="./images/faces/face5.png" alt="Face 5" class="emoji">
+                <img src="./images/faces/face6.png" alt="Face 6" class="emoji">
+                <img src="./images/faces/face7.png" alt="Face 7" class="emoji">
+                <img src="./images/faces/face8.png" alt="Face 8" class="emoji">
+                <img src="./images/faces/face9.png" alt="Face 9" class="emoji">
+                <img src="./images/faces/face10.png" alt="Face 10" class="emoji">
+            </div>
+
+        </div>
+       
+    </div>
+
+    <!-- Страница 3 -->
+    <div class="page page-3">
+        <div class="page-3-container">
+             <!-- Крестик для возврата -->
+            <div class="back-button-3">
+                <img src="./images/back.png" alt="Back" />
+            </div>
+            
+            <!-- Текст над прямоугольником -->
+            <div class="header-text-post">
+                Введи никнейм и соедени сердца,<br/>чтобы лайкнуть пост 
+            </div>
+            
+            <!-- Белый прямоугольник с текстом -->
+            <div class="center-box-post">
+                <div class="upper-container">
+                    <!-- Серый кружок -->
+                    <span class="avatar"></span>
+                    <!-- <img src="./images/profile.jpg" class="avatar" /> -->
+
+                    <!-- Текстовое поле -->
+                    <input type="text" class="username-input" placeholder="Введите никнейм">
+
+                    <!-- Три точки -->
+                    <div class="dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <!-- Центральный контейнер (для изображения post.png) -->
+                <div class="center-container"></div>
+
+                <!-- Нижний контейнер -->
+                <div class="lower-container">
+                    <!-- Левый блок (три иконки с текстами) -->
+                    <div class="left-icons">
+                        <!-- Лайки -->
+                        <div class="icon-group">
+                            <img src="./images/like.png" alt="Like" class="icon">
+                            <span class="icon-text">199</span>
+                        </div>
+
+                        <!-- Комментарии -->
+                        <div class="icon-group">
+                            <img src="./images/comment.png" alt="Comment" class="icon comment">
+                            <span class="icon-text">1</span>
+                        </div>
+
+                        <!-- Отправка -->
+                        <div class="icon-group">
+                            <img src="./images/send.png" alt="Send" class="icon">
+                            <span class="icon-text">9</span>
+                        </div>
+                    </div>
+
+                    <!-- Правый блок (иконка закладки) -->
+                    <div class="right-icon">
+                        <img src="./images/bookmark.png" alt="Bookmark" class="icon">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Контейнер для сердец -->
+            <div class="hearts-container">
+                <img src="./images/heart_broken.png" alt="Heart" class="heart heart-1">
+                <img src="./images/heart_broken.png" alt="Heart" class="heart heart-2">
+                <img src="./images/heart_broken.png" alt="Heart" class="heart heart-3">
+                <img src="./images/heart_broken.png" alt="Heart" class="heart heart-4">
+                <img src="./images/heart_broken.png" alt="Heart" class="heart heart-5">
+                <img src="./images/heart_broken.png" alt="Heart" class="heart heart-6">
+                <img src="./images/heart_broken.png" alt="Heart" class="heart heart-7">
+                <img src="./images/heart_broken.png" alt="Heart" class="heart heart-8">
+                <img src="./images/heart_broken.png" alt="Heart" class="heart heart-9">
+                <img src="./images/heart_broken.png" alt="Heart" class="heart heart-10">
+                <img src="./images/heart_broken.png" alt="Heart" class="heart heart-11">
+                <img src="./images/heart_broken.png" alt="Heart" class="heart heart-12">
+                <img src="./images/heart_broken.png" alt="Heart" class="heart heart-13">
+                <img src="./images/heart_broken.png" alt="Heart" class="heart heart-14">
+                <img src="./images/heart_broken.png" alt="Heart" class="heart heart-15">
+            </div>
+        </div>
+        </div>
+       
+
+    <!-- Страница 4 -->
+    <div class="page page-4">
+        <div class="page-4-container">
+            <!-- Крестик для возврата -->
+            <div class="back-button-4">
+                <img src="./images/back.png" alt="Back" />
+            </div>
+
+            <!-- Контейнер для роз -->
+            <div class="roses-container">
+                <!-- Роза 1 -->
+                <div class="rose-wrapper">
+                    <img src="./images/blue_rose.png" alt="Blue Rose" class="rose rose-1">
+                    <img src="./images/selected_rose.png" alt="Selected Rose" class="selected-rose selected-rose-1">
+                </div>
+
+                <!-- Роза 2 -->
+                <div class="rose-wrapper">
+                    <img src="./images/blue_rose.png" alt="Blue Rose" class="rose rose-2">
+                    <img src="./images/selected_rose.png" alt="Selected Rose" class="selected-rose selected-rose-2">
+                </div>
+
+                <!-- Роза 3 -->
+                <div class="rose-wrapper">
+                    <img src="./images/blue_rose.png" alt="Blue Rose" class="rose rose-3">
+                    <img src="./images/selected_rose.png" alt="Selected Rose" class="selected-rose selected-rose-3">
+                </div>
+
+                <!-- Роза 4 -->
+                <div class="rose-wrapper">
+                    <img src="./images/blue_rose.png" alt="Blue Rose" class="rose rose-4">
+                    <img src="./images/selected_rose.png" alt="Selected Rose" class="selected-rose selected-rose-4">
+                </div>
+
+                <!-- Роза 5 -->
+                <div class="rose-wrapper">
+                    <img src="./images/blue_rose.png" alt="Blue Rose" class="rose rose-5">
+                    <img src="./images/selected_rose.png" alt="Selected Rose" class="selected-rose selected-rose-5">
+                </div>
+
+                <!-- Роза 6 -->
+                <div class="rose-wrapper">
+                    <img src="./images/blue_rose.png" alt="Blue Rose" class="rose rose-6">
+                    <img src="./images/selected_rose.png" alt="Selected Rose" class="selected-rose selected-rose-6">
+                </div>
+
+                <!-- Роза 7 -->
+                <div class="rose-wrapper">
+                    <img src="./images/blue_rose.png" alt="Blue Rose" class="rose rose-7">
+                    <img src="./images/selected_rose.png" alt="Selected Rose" class="selected-rose selected-rose-7">
+                </div>
+
+                <!-- Роза 8 -->
+                <div class="rose-wrapper">
+                    <img src="./images/blue_rose.png" alt="Blue Rose" class="rose rose-8">
+                    <img src="./images/selected_rose.png" alt="Selected Rose" class="selected-rose selected-rose-8">
+                </div>
+                
+                <!-- Роза 9 -->
+                <div class="rose-wrapper">
+                    <img src="./images/blue_rose.png" alt="Blue Rose" class="rose rose-9">
+                    <img src="./images/selected_rose.png" alt="Selected Rose" class="selected-rose selected-rose-9">
+                </div>
+
+                <!-- Роза 10 -->
+                <div class="rose-wrapper">
+                    <img src="./images/blue_rose.png" alt="Blue Rose" class="rose rose-10">
+                    <img src="./images/selected_rose.png" alt="Selected Rose" class="selected-rose selected-rose-10">
+                </div>
+
+                <!-- Роза 11 -->
+                <div class="rose-wrapper">
+                    <img src="./images/blue_rose.png" alt="Blue Rose" class="rose rose-11">
+                    <img src="./images/selected_rose.png" alt="Selected Rose" class="selected-rose selected-rose-11">
+                </div>
+
+                <!-- Роза 12 -->
+                <div class="rose-wrapper">
+                    <img src="./images/blue_rose.png" alt="Blue Rose" class="rose rose-12">
+                    <img src="./images/selected_rose.png" alt="Selected Rose" class="selected-rose selected-rose-12">
+                </div>
+
+                <!-- Роза 13 -->
+                <div class="rose-wrapper">
+                    <img src="./images/blue_rose.png" alt="Blue Rose" class="rose rose-13">
+                    <img src="./images/selected_rose.png" alt="Selected Rose" class="selected-rose selected-rose-13">
+                </div>
+
+                <!-- Роза 14 -->
+                <div class="rose-wrapper">
+                    <img src="./images/blue_rose.png" alt="Blue Rose" class="rose rose-14">
+                    <img src="./images/selected_rose.png" alt="Selected Rose" class="selected-rose selected-rose-14">
+                </div>
+
+                <!-- Роза 15 -->
+                <div class="rose-wrapper">
+                    <img src="./images/blue_rose.png" alt="Blue Rose" class="rose rose-15">
+                    <img src="./images/selected_rose.png" alt="Selected Rose" class="selected-rose selected-rose-15">
+                </div>
+
+                <!-- Роза 16 -->
+                <div class="rose-wrapper">
+                    <img src="./images/blue_rose.png" alt="Blue Rose" class="rose rose-16">
+                    <img src="./images/selected_rose.png" alt="Selected Rose" class="selected-rose selected-rose-16">
+                </div>
+            </div>
+
+            <!-- Центральный контент -->
+            <div class="center-content">
+                <img src="./images/ex_1.png" alt="EX" class="ex-image">
+                <p class="ex-text">Избавься от надписи<br>как от бывшего из памяти</p>
+            </div>
+            </div>
+        </div>
+        
+    <!-- Затемнение фона -->
+    <div class="final-overlay"></div>
+
+    <!-- Финальная надпись -->
+    <div class="final-text"></div>
 
     <!-- Подключение скрипта -->
     <script src="./javascripts/script.js"></script>
+
 </body>
 </html>
