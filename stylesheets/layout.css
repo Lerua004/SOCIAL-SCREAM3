@@ -612,13 +612,6 @@ body {
     overflow-x: hidden;
 }
 
-.page-4-container {
-    display: flex;
-    flex-direction: column; /* Размещаем элементы по вертикали */
-    justify-content: center;
-}
-
-
 
 
 /* Крестик для возврата */
@@ -674,10 +667,21 @@ body {
 /* Общие стили для роз */
 .rose {
     position: absolute;
-    width: 380px; /* Размер роз */
+    width: 420px; /* Размер роз */
     /* height: 50px; Размер роз */
     cursor: pointer;
 }
+
+
+/* Коллажные розы */
+.selected-rose {
+    position: absolute;
+    width: 320px;
+    opacity: 0; /* Скрытые по умолчанию */
+    transition: opacity 0.3s ease; /* Плавное появление */
+    z-index: 1; /* Коллажная роза ниже синей */
+}
+
 
 /* Позиции для каждой розы */
 .rose-1 {
@@ -688,13 +692,13 @@ body {
 
 .rose-2 {
     top: -14%;
-    left: 16%;
+    left: 13%;
     transform: rotate(-155deg);
 }
 
 .rose-3 {
-    top: -23%;
-    left: 33%;
+    top: -17%;
+    left: 37%;
     transform: rotate(227deg);
 }
 
@@ -706,9 +710,9 @@ body {
 }
 
 .rose-5 {
-    top: -16%;
-    right: -1%;
-    transform: rotate(265deg);
+    top: -8%;
+    right: 5%;
+    transform: rotate(277deg);
 }
 
 .rose-6 {
@@ -736,8 +740,8 @@ body {
 }
 
 .rose-10 {
-    bottom: -23%;
-    right: 40%;
+    bottom: -15%;
+    right: 32%;
     transform: rotate(55deg);
 }
 
@@ -754,8 +758,8 @@ body {
 }
 
 .rose-13 {
-    top: 55%;
-    left: -13%;
+    top: 50%;
+    left: -7%;
     transform: rotate(121deg);
 }
 
@@ -778,121 +782,162 @@ body {
 }
 
 
+.rose-17 {
+    bottom: 84%;
+    left: 45%;
+    transform: rotate(222deg);
+}
+
+
+.rose-18 {
+    bottom: -15%;
+    left: 24%;
+    transform: rotate(70deg);
+}
 /* Обертка для каждой пары роз */
-
-
-/* Коллажные розы */
-.selected-rose {
-    position: absolute;
-    width: 344px;
-    opacity: 0; /* Скрытые по умолчанию */
-    transition: opacity 0.3s ease; /* Плавное появление */
-    z-index: 1; /* Коллажная роза ниже синей */
+.rose-19 {
+    top: -14%;
+    left: 25%;
+    transform: rotate(-135deg);
 }
 
-/* Эффект наведения */
-.rose-wrapper:hover .selected-rose {
-    opacity: 1; /* Показываем коллажную розу */
+.rose-20 {
+    top: 8%;
+    right: 3%;
+    transform: rotate(-78deg);
 }
 
-/* Позиции для каждой коллажной розы */
+
+/* Позиции для каждой розы */
 .selected-rose-1 {
-    top: -12%;
+    top: -5%;
     left: 6%;
-    transform: rotate(229deg);
+    transform: rotate(181deg);
 }
 
 .selected-rose-2 {
-    top: -16%;
-    left: 22%;
-    transform: rotate(-106deg);
+    top: -7%;
+    left: 19%;
+    transform: rotate(-155deg);
 }
 
 .selected-rose-3 {
-    top: -21%;
-    left: 35%;
-    transform: rotate(230deg);
+    top: -10%;
+    left: 43%;
+    transform: rotate(227deg);
 }
 
 .selected-rose-4 {
-    top: -18%;
-    right: 17%;
-    transform: rotate(282deg);
+    top: -15%;
+    right: 19%;
+    transform: rotate(239deg);
 
 }
 
 .selected-rose-5 {
-    top: -14%;
-    right: 1%;
-    transform: rotate(319deg);
+    top: -8%;
+    right: 5%;
+    transform: rotate(277deg);
 }
 
 .selected-rose-6 {
-    top: 11%;
-    right: -2%;
-    transform: rotate(339deg);
+    top: 23%;
+    right: -1%;
+    transform: rotate(286deg);
 }
 
 .selected-rose-7 {
-    bottom: 1%;
-    right: -4%;
-    transform: rotate(42deg);
+    bottom: 9%;
+    right: -3%;
+    transform: rotate(-15deg);
 }
 
 .selected-rose-8 {
-    bottom: -11%;
-    right: 4%;
-    transform: rotate(39deg);
+    bottom: -5%;
+    right: 6%;
+    transform: rotate(-14deg);
 }
 
 .selected-rose-9 {
-    bottom: -19%;
+    bottom: -10%;
     right: 23%;
-    transform: rotate(52deg);
+    transform: rotate(33deg);
 }
 
 .selected-rose-10 {
-    bottom: -16%;
-    right: 42%;
-    transform: rotate(71deg);
+    bottom: -11%;
+    right: 40%;
+    transform: rotate(55deg);
 }
 
 .selected-rose-11 {
-    bottom: -15%;
-    left: 12%;
-    transform: rotate(136deg);
+    bottom: -11%;
+    left: 13%;
+    transform: rotate(81deg);
 }
 
 .selected-rose-12 {
-    bottom: -8%;
-    left: -2%;
-    transform: rotate(151deg);
+    bottom: -3%;
+    left: 0%;
+    transform: rotate(104deg);
 }
 
 .selected-rose-13 {
-    top: 44%;
-    left: -6%;
-    transform: rotate(157deg);
+    top: 48%;
+    left: -1%;
+    transform: rotate(121deg);
 }
 
 .selected-rose-14 {
-    top: 5%;
-    left: 0%;
-    transform: rotate(207deg);
+    top: 11%;
+    left: -1%;
+    transform: rotate(167deg);
 }
 
 .selected-rose-15 {
-    bottom: 21%;
-    right: 0%;
-    transform: rotate(10deg);
+    bottom: 29%;
+    right: 1%;
+    transform: rotate(-34deg);
 }
 
 .selected-rose-16 {
-    bottom: 32%;
-    left: -6%;
-    transform: rotate(185deg);
+    bottom: 37%;
+    left: -3%;
+    transform: rotate(142deg);
 }
 
+.selected-rose-17 {
+    bottom: 84%;
+    left: 45%;
+    transform: rotate(222deg);
+}
+
+.selected-rose-18 {
+    bottom: -10%;
+    left: 26%;
+    transform: rotate(70deg);
+}
+
+.selected-rose-19 {
+    top: -14%;
+    left: 30%;
+    transform: rotate(-135deg);
+}
+
+.selected-rose-20 {
+    top: 8%;
+    right: 3%;
+    transform: rotate(-78deg);
+}
+
+/* Эффект наведения */
+.rose-wrapper:hover .rose {
+    opacity: 0; /* Скрываем синюю розу */
+}
+
+.rose-wrapper:hover .selected-rose {
+    opacity: 1; /* Показываем коллажную розу */
+}
 
 
 /* Центральный контент */

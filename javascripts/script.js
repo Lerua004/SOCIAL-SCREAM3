@@ -113,7 +113,7 @@ let stoppedFaceIndex = null; // Индекс остановленного эмо
 // Функция для обновления вращения лиц
 function updateFaceRotations() {
     // Увеличиваем общий угол
-    globalAngle += 6; // Увеличиваем скорость вращения (быстрее)
+    globalAngle += 9; // Увеличиваем скорость вращения (быстрее)
 
     faces.forEach((face, index) => {
         // Если эмодзи не остановлен, продолжаем его вращать
@@ -330,8 +330,9 @@ exImage.addEventListener('click', () => {
         // Заменяем изображение
         exImage.src = exImages[currentImageIndex];
     } else {
-        // Если достигли последнего изображения (ex_6.png), показываем крестик
-        backButton_4.classList.add('visible');
+        // Если достигли последнего изображения (ex_6.png), скрываем изображение и показываем крестик
+        exImage.style.display = 'none'; // Скрываем изображение
+        backButton_4.classList.add('visible'); // Показываем крестик
     }
 });
 
@@ -364,7 +365,7 @@ backButton_4.addEventListener('click', () => {
         finalOverlay.classList.add('visible');
 
         // Анимация текста "Ты победил все фобии..."
-        const text = 'Ты победил все фобии...';
+        const text = 'ТЫ ПОБЕДИЛ ФОБИИ...';
         let index = 0;
 
         const typingInterval = setInterval(() => {
@@ -380,3 +381,7 @@ backButton_4.addEventListener('click', () => {
         finalText.classList.add('visible');
     }, 500); // Задержка для плавного эффекта
 });
+
+
+
+

@@ -444,12 +444,7 @@
     .ex-text {
         font-size: 1.5rem !important;
     }
-    .rose {
-        width: 300px !important;
-    }
-    .selected-rose {
-        width: 270px !important;
-    }
+
 }
 
 /* Для экранов до 992px */
@@ -460,12 +455,10 @@
     .ex-text {
         font-size: 1.3rem !important;
     }
-    .rose {
+    /* .rose {
         width: 250px !important;
-    }
-    .selected-rose {
-        width: 225px !important;
-    }
+    } */
+
 
     
 }
@@ -478,12 +471,10 @@
     .ex-text {
         font-size: 1.2rem !important;
     }
-    .rose {
+    /* .rose {
         width: 200px !important;
-    }
-    .selected-rose {
-        width: 180px !important;
-    }
+    } */
+
 
 }
 
@@ -495,210 +486,185 @@
     .ex-text {
         font-size: 1rem !important;
     }
-    .rose {
+    /* .rose {
         width: 200px !important;
+    } */
+}
+
+
+
+/* Скрытие роз на маленьких экранах */
+.hide-on-small {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .hide-on-small {
+        display: block;
     }
+}
+
+
+/* Скрываем лишние розы на планшетах */
+@media (max-width: 1024px) {
+    .rose-21,
+    .rose-22,
+    .rose-23 {
+        display: none;
+    }
+}
+
+/* Скрываем лишние розы на телефонах */
+@media (max-width: 768px) {
+
+
+    .rose {
+        width: 280px !important;
+    }
+
     .selected-rose {
-        width: 135px !important;
+        width: 240px !important;
     }
 
-
-    /* Позиции для каждой розы */
     .rose-1 {
-        top: -5%;
-        left: -8% !important;
-        transform: rotate(181deg);
+        top: -2% !important;
+        left: -42% !important;
+        transform: rotate(205deg) !important;
     }
 
     .rose-2 {
-        top: -7% !important;
-        left: 20% !important;
-        transform: rotate(-155deg);
+        top: -10% !important;
+        left: -9% !important;
+        transform: rotate(-127deg) !important;
     }
 
     .rose-3 {
-        top: -9% !important;
-        left: 44% !important;
-        transform: rotate(227deg);
+        top: -10% !important;
+        left: 20% !important;
+        transform: rotate(235deg) !important;
     }
 
     .rose-4 {
-        top: 27% !important;
-        right: -25% !important;
-        transform: rotate(301deg) !important;
-
+        top: -5% !important;
+        right: -30% !important;
+        transform: rotate(269deg) !important;
     }
 
     .rose-5 {
-        top: -16% !important;
-        right: -20% !important;
-        transform: rotate(265deg);
+        bottom: -3% !important;
+        left: -32% !important;
+        transform: rotate(451deg) !important;
+        top: auto !important;
+
     }
 
     .rose-6 {
-        top: 7% !important;
-        right: -13% !important;
-        transform: rotate(286deg);
+        bottom: -10% !important;
+        left: 4% !important;
+        transform: rotate(62deg) !important;
+        top: auto !important;
     }
 
     .rose-7 {
-        bottom: 12% !important;
-        right: -11%;
-        transform: rotate(-15deg);
+        bottom: -10% !important;
+        right: -7% !important;
+        transform: rotate(53deg) !important;
+        top: auto !important;
+
     }
 
     .rose-8 {
-        bottom: -2% !important;
-        right: -7% !important;
-        transform: rotate(-14deg);
-    }
-
-    .rose-9 {
-        bottom: -10% !important;
-        right: 20%;
-        transform: rotate(33deg);
-    }
-
-    .rose-10 {
-        bottom: -12% !important;
-        right: 40%;
-        transform: rotate(55deg);
-    }
-
-    .rose-11 {
-        bottom: -18%;
-        left: -10% !important;
-        transform: rotate(81deg);
-    }
-
-    .rose-12 {
-        bottom: 11% !important;
-        left: -6% !important;
-        transform: rotate(109deg);
-    }
-
-    .rose-13 {
-        top: 48% !important;
-        left: -24% !important;
-        transform: rotate(121deg);
-    }
-
-    .rose-14 {
-        top: 11%;
-        left: -8% !important;
-        transform: rotate(167deg);
-    }
-
-    .rose-15 {
-        bottom: 29%;
-        right: -25% !important;
-        transform: rotate(-34deg);
-    }
-
-    .rose-16 {
-        bottom: 50% !important;
-        left: -29% !important;
-        transform: rotate(142deg);
+        bottom: -1% !important;
+        right: -40% !important;
+        transform: rotate(24deg) !important;    
     }
 
 
-    /* Позиции для каждой коллажной розы */
     .selected-rose-1 {
-        top: -12%;
-        left: 6%;
-        transform: rotate(229deg);
+        top: 1% !important;
+        left: -27% !important;
+        transform: rotate(205deg) !important;
     }
 
     .selected-rose-2 {
-        top: -4% !important;
-        left: 33% !important;
-        transform: rotate(-106deg);
+        top: -7% !important;
+        left: -1% !important;
+        transform: rotate(-127deg) !important;
     }
 
     .selected-rose-3 {
-        top: -4% !important;
-        left: 57% !important;
-        transform: rotate(267deg) !important;
+        top: -7% !important;
+        left: 30% !important;
+        transform: rotate(235deg) !important;
     }
 
     .selected-rose-4 {
-        top: 32% !important;
-        right: -7% !important;
-        transform: rotate(314deg) !important;
-
+        top: -3% !important;
+        right: -21% !important;
+        transform: rotate(269deg) !important;
     }
 
     .selected-rose-5 {
-        top: -6%;
-        right: -8% !important;
-        transform: rotate(319deg);
+        bottom: -1% !important;
+        left: -24% !important;
+        transform: rotate(451deg) !important;
+        top: auto !important;
+
     }
 
     .selected-rose-6 {
-        top: 11%;
-        right: -2%;
-        transform: rotate(339deg);
+        bottom: -8% !important;
+        left: 4% !important;
+        transform: rotate(62deg) !important;
+        top: auto !important;
     }
 
     .selected-rose-7 {
-        bottom: 11% !important;
-        right: 1% !important;
-        transform: rotate(42deg);
+        bottom: -8% !important;
+        right: 4% !important;
+        transform: rotate(53deg) !important;
+        top: auto !important;
+
     }
 
     .selected-rose-8 {
-        bottom: -2% !important;
-        right: 4%;
-        transform: rotate(39deg);
+        bottom: -1% !important;
+        right: -24% !important;
+        transform: rotate(24deg) !important; 
     }
 
-    .selected-rose-9 {
-        bottom: -5% !important;
-        right: 30% !important;
-        transform: rotate(52deg);
+    .rose-9,
+    .rose-10,
+    .rose-11,
+    .rose-12,
+    .rose-13,
+    .rose-14,
+    .rose-15,
+    .rose-16,
+    .rose-17,
+    .rose-18,
+    .rose-19,
+    .rose-20,
+    .rose-21,
+    .rose-22,
+    .rose-23,
+    
+    .selected-rose-9,
+    .selected-rose-10,
+    .selected-rose-11,
+    .selected-rose-12,
+    .selected-rose-13,
+    .selected-rose-14,
+    .selected-rose-15,
+    .selected-rose-16,
+    .selected-rose-17,
+    .selected-rose-18,
+    .selected-rose-19,
+    .selected-rose-20,
+    .selected-rose-21,
+    .selected-rose-22,
+    .selected-rose-23
+     {
+        display: none;
     }
-
-    .selected-rose-10 {
-        bottom: -16%;
-        right: 42%;
-        transform: rotate(71deg);
-    }
-
-    .selected-rose-11 {
-        bottom: -15%;
-        left: 12%;
-        transform: rotate(136deg);
-    }
-
-    .selected-rose-12 {
-        bottom: -11% !important;
-        left: -2%;
-        transform: rotate(151deg);
-    }
-
-    .selected-rose-13 {
-        top: 44%;
-        left: -6%;
-        transform: rotate(157deg);
-    }
-
-    .selected-rose-14 {
-        top: 5%;
-        left: 0%;
-        transform: rotate(207deg);
-    }
-
-    .selected-rose-15 {
-        bottom: 21%;
-        right: 0%;
-        transform: rotate(10deg);
-    }
-
-    .selected-rose-16 {
-        bottom: 32%;
-        left: -6%;
-        transform: rotate(185deg);
-    }
-
-
 }
