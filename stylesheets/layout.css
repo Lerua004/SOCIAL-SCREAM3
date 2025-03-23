@@ -492,6 +492,7 @@ body {
 .heart {
     position: absolute;
     pointer-events: none; /* Отключаем взаимодействие */
+    display: block;
 }
 
 /* Позиции для каждого сердца */
@@ -716,9 +717,9 @@ body {
 }
 
 .rose-6 {
-    top: 12%;
-    right: -7%;
-    transform: rotate(286deg);
+    top: 24%;
+    right: -13%;
+    transform: rotate(324deg);
 }
 
 .rose-7 {
@@ -735,19 +736,19 @@ body {
 
 .rose-9 {
     bottom: -19%;
-    right: 20%;
+    right: 16%;
     transform: rotate(33deg);
 }
 
 .rose-10 {
-    bottom: -15%;
-    right: 32%;
+    bottom: -16%;
+    right: 29%;
     transform: rotate(55deg);
 }
 
 .rose-11 {
-    bottom: -18%;
-    left: 11%;
+    bottom: -13%;
+    left: 10%;
     transform: rotate(81deg);
 }
 
@@ -758,9 +759,9 @@ body {
 }
 
 .rose-13 {
-    top: 50%;
-    left: -7%;
-    transform: rotate(121deg);
+    top: 37%;
+    left: -13%;
+    transform: rotate(142deg);
 }
 
 .rose-14 {
@@ -802,9 +803,9 @@ body {
 }
 
 .rose-20 {
-    top: 8%;
-    right: 3%;
-    transform: rotate(-78deg);
+    top: -1%;
+    right: -8%;
+    transform: rotate(-70deg);
 }
 
 
@@ -841,9 +842,9 @@ body {
 }
 
 .selected-rose-6 {
-    top: 23%;
-    right: -1%;
-    transform: rotate(286deg);
+    top: 26%;
+    right: -7%;
+    transform: rotate(321deg);
 }
 
 .selected-rose-7 {
@@ -859,20 +860,20 @@ body {
 }
 
 .selected-rose-9 {
-    bottom: -10%;
-    right: 23%;
-    transform: rotate(33deg);
+    bottom: -13%;
+    right: 24%;
+    transform: rotate(38deg);
 }
 
 .selected-rose-10 {
     bottom: -11%;
-    right: 40%;
+    right: 35%;
     transform: rotate(55deg);
 }
 
 .selected-rose-11 {
-    bottom: -11%;
-    left: 13%;
+    bottom: -5%;
+    left: 15%;
     transform: rotate(81deg);
 }
 
@@ -883,9 +884,9 @@ body {
 }
 
 .selected-rose-13 {
-    top: 48%;
-    left: -1%;
-    transform: rotate(121deg);
+    top: 36%;
+    left: -5%;
+    transform: rotate(130deg);
 }
 
 .selected-rose-14 {
@@ -925,8 +926,8 @@ body {
 }
 
 .selected-rose-20 {
-    top: 8%;
-    right: 3%;
+    top: 2%;
+    right: -5%;
     transform: rotate(-78deg);
 }
 
@@ -954,17 +955,24 @@ body {
 .ex-image {
     width: 550px; /* Размер изображения */
     height: auto; /* Сохраняем пропорции */
-    margin-bottom: 20px; /* Отступ между изображением и текстом */
+    margin-bottom: 110px; /* Отступ между изображением и текстом */
     transition: opacity 0.3s ease; /* Плавное изменение прозрачности */
     cursor: pointer;
 }
 
 /* Текст */
 .ex-text {
+    position: fixed;
     font-size: 1.8rem;
     color: white;
     line-height: 1.5;
+    left: 50%;
+    width: 100vw;
+    top: 50%;
+    margin-top: 13vh;
+    transform: translate(-50%, 50%);
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Для лучшей видимости */
+    z-index: 1;
 }
 
 

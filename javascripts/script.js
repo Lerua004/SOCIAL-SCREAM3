@@ -223,8 +223,13 @@ function enableHearts() {
                 heart.classList.add('repaired'); // Отмечаем как "починенное"
                 heartsClicked++; // Увеличиваем счетчик
 
+                const screenWidth = window.innerWidth;
+
                 // Проверяем, все ли сердца нажаты
-                if (heartsClicked === hearts.length) {
+                if (screenWidth < 480 && heartsClicked === 12) {
+                    showPost();
+                    
+                } else if (heartsClicked === hearts.length) {
                     showPost(); // Показываем пост
                 }
             }
