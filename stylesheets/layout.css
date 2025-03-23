@@ -668,7 +668,7 @@ body {
 /* Общие стили для роз */
 .rose {
     position: absolute;
-    width: 420px; /* Размер роз */
+    width: 370px; /* Размер роз */
     /* height: 50px; Размер роз */
     cursor: pointer;
 }
@@ -677,90 +677,89 @@ body {
 /* Коллажные розы */
 .selected-rose {
     position: absolute;
-    width: 320px;
+    width: 300px;
     opacity: 0; /* Скрытые по умолчанию */
     transition: opacity 0.3s ease; /* Плавное появление */
-    z-index: 1; /* Коллажная роза ниже синей */
+    z-index: 2; /* Коллажная роза ниже синей */
 }
 
 
 /* Позиции для каждой розы */
 .rose-1 {
-    top: -5%;
-    left: 0%;
+    top: -10%;
+    left: -3%;
     transform: rotate(181deg);
 }
 
 .rose-2 {
-    top: -14%;
-    left: 13%;
+    top: -22%;
+    left: 11%;
     transform: rotate(-155deg);
 }
 
 .rose-3 {
-    top: -17%;
-    left: 37%;
+    top: -25%;
+    left: 38%;
     transform: rotate(227deg);
 }
 
 .rose-4 {
-    top: -24%;
-    right: 17%;
-    transform: rotate(239deg);
-
+    top: -27%;
+    right: 12%;
+    transform: rotate(259deg);
 }
 
 .rose-5 {
-    top: -8%;
-    right: 5%;
+    top: -21%;
+    right: -3%;
     transform: rotate(277deg);
 }
 
 .rose-6 {
-    top: 24%;
-    right: -13%;
-    transform: rotate(324deg);
+    top: 28%;
+    right: -9%;
+    transform: rotate(327deg);
 }
 
 .rose-7 {
-    bottom: 9%;
-    right: -11%;
+    bottom: 12%;
+    right: -9%;
     transform: rotate(-15deg);
 }
 
 .rose-8 {
-    bottom: -5%;
-    right: 0%;
-    transform: rotate(-14deg);
+    bottom: -8%;
+    right: -2%;
+    transform: rotate(-3deg);
 }
 
 .rose-9 {
-    bottom: -19%;
-    right: 16%;
-    transform: rotate(33deg);
+    bottom: -20%;
+    right: 13%;
+    transform: rotate(37deg);
 }
 
 .rose-10 {
-    bottom: -16%;
+    bottom: -24%;
     right: 29%;
     transform: rotate(55deg);
 }
 
 .rose-11 {
-    bottom: -13%;
+    bottom: -15%;
     left: 10%;
     transform: rotate(81deg);
 }
 
 .rose-12 {
-    bottom: -7%;
-    left: -5%;
-    transform: rotate(104deg);
+    bottom: 2%;
+    left: -3%;
+    transform: rotate(108deg);
 }
 
 .rose-13 {
-    top: 37%;
-    left: -13%;
+    top: 36%;
+    left: -7%;
     transform: rotate(142deg);
 }
 
@@ -782,68 +781,65 @@ body {
     transform: rotate(142deg);
 }
 
-
 .rose-17 {
     bottom: 84%;
     left: 45%;
     transform: rotate(222deg);
 }
 
-
 .rose-18 {
-    bottom: -15%;
+    bottom: -22%;
     left: 24%;
     transform: rotate(70deg);
 }
-/* Обертка для каждой пары роз */
+
 .rose-19 {
-    top: -14%;
-    left: 25%;
+    top: -27%;
+    left: 26%;
     transform: rotate(-135deg);
 }
 
 .rose-20 {
-    top: -1%;
+    top: 1%;
     right: -8%;
-    transform: rotate(-70deg);
+    transform: rotate(-62deg);
 }
-
 
 /* Позиции для каждой розы */
 .selected-rose-1 {
-    top: -5%;
-    left: 6%;
+    top: -10%;
+    left: 1%;
     transform: rotate(181deg);
 }
 
 .selected-rose-2 {
-    top: -7%;
-    left: 19%;
+    top: -17%;
+    left: 17%;
     transform: rotate(-155deg);
 }
 
 .selected-rose-3 {
-    top: -10%;
-    left: 43%;
+    top: -20%;
+    left: 44%;
     transform: rotate(227deg);
 }
 
 .selected-rose-4 {
-    top: -15%;
-    right: 19%;
+    top: -18%;
+    right: 17%;
     transform: rotate(239deg);
 
 }
 
 .selected-rose-5 {
-    top: -8%;
-    right: 5%;
+    top: -15%;
+    right: 0%;
     transform: rotate(277deg);
 }
 
 .selected-rose-6 {
-    top: 26%;
-    right: -7%;
+    top: 29%;
+    right: -4%;
     transform: rotate(321deg);
 }
 
@@ -854,38 +850,38 @@ body {
 }
 
 .selected-rose-8 {
-    bottom: -5%;
-    right: 6%;
+    bottom: -7%;
+    right: 3%;
     transform: rotate(-14deg);
 }
 
 .selected-rose-9 {
-    bottom: -13%;
-    right: 24%;
+    bottom: -18%;
+    right: 20%;
     transform: rotate(38deg);
 }
 
 .selected-rose-10 {
-    bottom: -11%;
-    right: 35%;
+    bottom: -19%;
+    right: 34%;
     transform: rotate(55deg);
 }
 
 .selected-rose-11 {
-    bottom: -5%;
-    left: 15%;
+    bottom: -12%;
+    left: 12%;
     transform: rotate(81deg);
 }
 
 .selected-rose-12 {
-    bottom: -3%;
+    bottom: 2%;
     left: 0%;
     transform: rotate(104deg);
 }
 
 .selected-rose-13 {
-    top: 36%;
-    left: -5%;
+    top: 34%;
+    left: -3%;
     transform: rotate(130deg);
 }
 
@@ -914,14 +910,14 @@ body {
 }
 
 .selected-rose-18 {
-    bottom: -10%;
+    bottom: -18%;
     left: 26%;
     transform: rotate(70deg);
 }
 
 .selected-rose-19 {
-    top: -14%;
-    left: 30%;
+    top: -20%;
+    left: 32%;
     transform: rotate(-135deg);
 }
 
