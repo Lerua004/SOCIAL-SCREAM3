@@ -686,86 +686,86 @@ body {
 
 /* Позиции для каждой розы */
 .rose-1 {
-    top: -10%;
-    left: -3%;
+    top: -5%;
+    left: 2%;
     transform: rotate(181deg);
 }
 
 .rose-2 {
-    top: -22%;
-    left: 11%;
+    top: -18%;
+    left: 14%;
     transform: rotate(-155deg);
 }
 
 .rose-3 {
-    top: -25%;
-    left: 38%;
+    top: -24%;
+    left: 40%;
     transform: rotate(227deg);
 }
 
 .rose-4 {
-    top: -27%;
-    right: 12%;
+    top: -22%;
+    right: 17%;
     transform: rotate(259deg);
 }
 
 .rose-5 {
-    top: -21%;
-    right: -3%;
+    top: -9%;
+    right: 5%;
     transform: rotate(277deg);
 }
 
 .rose-6 {
-    top: 28%;
-    right: -9%;
-    transform: rotate(327deg);
+    top: 35%;
+    right: -2%;
+    transform: rotate(331deg);
 }
 
 .rose-7 {
-    bottom: 12%;
-    right: -9%;
-    transform: rotate(-15deg);
+    bottom: 9%;
+    right: -2%;
+    transform: rotate(-11deg);
 }
 
 .rose-8 {
-    bottom: -8%;
-    right: -2%;
-    transform: rotate(-3deg);
+    bottom: -11%;
+    right: 5%;
+    transform: rotate(14deg);
 }
 
 .rose-9 {
-    bottom: -20%;
-    right: 13%;
-    transform: rotate(37deg);
+    bottom: -24%;
+    right: 18%;
+    transform: rotate(43deg);
 }
 
 .rose-10 {
-    bottom: -24%;
-    right: 29%;
+    bottom: -28%;
+    right: 32%;
     transform: rotate(55deg);
 }
 
 .rose-11 {
-    bottom: -15%;
-    left: 10%;
-    transform: rotate(81deg);
+    bottom: -13%;
+    left: 13%;
+    transform: rotate(85deg)
 }
 
 .rose-12 {
     bottom: 2%;
-    left: -3%;
-    transform: rotate(108deg);
+    left: 1%;
+    transform: rotate(115deg);
 }
 
 .rose-13 {
-    top: 36%;
-    left: -7%;
+    top: 40%;
+    left: -2%;
     transform: rotate(142deg);
 }
 
 .rose-14 {
-    top: 11%;
-    left: -6%;
+    top: 16%;
+    left: -1%;
     transform: rotate(167deg);
 }
 
@@ -788,21 +788,21 @@ body {
 }
 
 .rose-18 {
-    bottom: -22%;
-    left: 24%;
-    transform: rotate(70deg);
+    bottom: -24%;
+    left: 26%;
+    transform: rotate(73deg);
 }
 
 .rose-19 {
-    top: -27%;
-    left: 26%;
+    top: -24%;
+    left: 28%;
     transform: rotate(-135deg);
 }
 
 .rose-20 {
-    top: 1%;
-    right: -8%;
-    transform: rotate(-62deg);
+    top: 13%;
+    right: 0%;
+    transform: rotate(-53deg);
 }
 
 /* Позиции для каждой розы */
@@ -813,81 +813,81 @@ body {
 }
 
 .selected-rose-2 {
-    top: -17%;
-    left: 17%;
+    top: -16%;
+    left: 18%;
     transform: rotate(-155deg);
 }
 
 .selected-rose-3 {
     top: -20%;
-    left: 44%;
+    left: 45%;
     transform: rotate(227deg);
 }
 
 .selected-rose-4 {
     top: -18%;
-    right: 17%;
-    transform: rotate(239deg);
+    right: 19%;
+    transform: rotate(256deg);
 
 }
 
 .selected-rose-5 {
-    top: -15%;
-    right: 0%;
+    top: -7%;
+    right: 7%;
     transform: rotate(277deg);
 }
 
 .selected-rose-6 {
-    top: 29%;
-    right: -4%;
+    top: 37%;
+    right: 3%;
     transform: rotate(321deg);
 }
 
 .selected-rose-7 {
-    bottom: 9%;
-    right: -3%;
+    bottom: 6%;
+    right: 1%;
     transform: rotate(-15deg);
 }
 
 .selected-rose-8 {
-    bottom: -7%;
-    right: 3%;
-    transform: rotate(-14deg);
+    bottom: -9%;
+    right: 9%;
+    transform: rotate(3deg);
 }
 
 .selected-rose-9 {
-    bottom: -18%;
-    right: 20%;
+    bottom: -21%;
+    right: 23%;
     transform: rotate(38deg);
 }
 
 .selected-rose-10 {
     bottom: -19%;
-    right: 34%;
+    right: 36%;
     transform: rotate(55deg);
 }
 
 .selected-rose-11 {
-    bottom: -12%;
-    left: 12%;
+    bottom: -9%;
+    left: 17%;
     transform: rotate(81deg);
 }
 
 .selected-rose-12 {
-    bottom: 2%;
-    left: 0%;
+    bottom: 5%;
+    left: 4%;
     transform: rotate(104deg);
 }
 
 .selected-rose-13 {
-    top: 34%;
-    left: -3%;
+    top: 39%;
+    left: 2%;
     transform: rotate(130deg);
 }
 
 .selected-rose-14 {
-    top: 11%;
-    left: -1%;
+    top: 14%;
+    left: 4%;
     transform: rotate(167deg);
 }
 
@@ -911,20 +911,20 @@ body {
 
 .selected-rose-18 {
     bottom: -18%;
-    left: 26%;
+    left: 28%;
     transform: rotate(70deg);
 }
 
 .selected-rose-19 {
     top: -20%;
-    left: 32%;
+    left: 33%;
     transform: rotate(-135deg);
 }
 
 .selected-rose-20 {
-    top: 2%;
-    right: -5%;
-    transform: rotate(-78deg);
+    top: 14%;
+    right: 1%;
+    transform: rotate(-66deg);
 }
 
 /* Эффект наведения */
@@ -949,7 +949,7 @@ body {
 
 /* Изображение EX */
 .ex-image {
-    width: 550px; /* Размер изображения */
+    width: 510px; /* Размер изображения */
     height: auto; /* Сохраняем пропорции */
     margin-bottom: 110px; /* Отступ между изображением и текстом */
     transition: opacity 0.3s ease; /* Плавное изменение прозрачности */
