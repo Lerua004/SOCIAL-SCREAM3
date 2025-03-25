@@ -1,656 +1,663 @@
 /* -------------- Первая страница --------- */
 
-/* Для устройств с шириной экрана до 768px (планшеты и мобильные устройства) */
+/* планшет */
 @media (max-width: 900px) {
-    /* Изменение размеров изображений */
-    .face, .mouth, .hands {
-        width: 60vw !important; /* Уменьшаем размеры для маленьких экранов */
-    }
+  .face,
+  .mouth,
+  .hands {
+    width: 60vw !important;
+  }
 
-    .typed-text {
-        font-size: 5vw;
-    }
+  .typed-text {
+    font-size: 5vw;
+  }
 
-    /* Текстовый блок */
-    .text-container {
-        font-size: 4vw; /* Увеличиваем шрифт для лучшей читаемости */
-    }
+  .text-container {
+    font-size: 4vw;
+  }
 }
 
-/* Для устройств с шириной экрана до 480px (мобильные устройства) */
+/* мобилка */
 @media (max-width: 480px) {
-    /* Изменение размеров изображений */
-    .face, .mouth, .hands {
-        width: 70vw !important; /* Дальнейшее уменьшение размеров */
-    }
+  .face,
+  .mouth,
+  .hands {
+    width: 70vw !important;
+  }
 
-    /* Текстовый блок */
-    .text-container {
-        font-size: 4vw !important; /* Увеличиваем шрифт */
-    }
+  .text-container {
+    font-size: 4vw !important;
+  }
 
-    .typed-text {
-        font-size: 7vw !important;
-    }
-    /* Позиционирование текстового блока */
-    .text-container {
-        padding: 0 10px !important; /* Добавляем отступы для текста */
-    }
+  .typed-text {
+    font-size: 7vw !important;
+  }
+
+  .text-container {
+    padding: 0 10px !important;
+  }
 }
 
-/* Для устройств с высоким разрешением (например, Retina) */
+/*  выс разрешение  */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    /* Улучшение качества изображений */
-    .face, .mouth, .hands {
-        image-rendering: -webkit-optimize-contrast; /* Для WebKit-браузеров */
-        image-rendering: crisp-edges; /* Для современных браузеров */
-    }
+  /*  кач изображений */
+  .face,
+  .mouth,
+  .hands {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
 }
 
 /* -------------- Вторая страница --------- */
 
-/* Для устройств с шириной экрана до 768px (планшеты и мобильные устройства) */
+/* планшет */
 @media (max-width: 900px) {
-    /* Текст над прямоугольником */
-    .header-text {
-        font-size: 1.2rem !important; /* Уменьшаем размер текста */
-        margin-bottom: 15px !important; /* Уменьшаем отступ */
-    }
+  .header-text {
+    font-size: 1.2rem !important;
+    margin-bottom: 15px !important;
+  }
 
-    /* Белый прямоугольник */
-    .center-box {
-        width: 250px !important; /* Уменьшаем ширину */
-        height: 120px !important; /* Уменьшаем высоту */
-    }
+  .center-box {
+    width: 250px !important;
+    height: 120px !important;
+  }
 
-    /* Текст "STOP" */
-    .stop-text {
-        font-size: 5rem !important; /* Уменьшаем размер текста */
-        letter-spacing: 3px !important; /* Уменьшаем расстояние между буквами */
-    }
+  .stop-text {
+    font-size: 5rem !important;
+    letter-spacing: 3px !important;
+  }
 
-    /* Размер лиц */
-    .emoji {
-        width: 15vw !important; /* Увеличиваем относительный размер лиц для маленьких экранов */
-    }
+  .emoji {
+    width: 15vw !important;
+  }
 
-    .emoji:nth-child(1) { top: 24% !important; left: 9% !important; }
-    .emoji:nth-child(2) { top: 6% !important; left: 10% !important; }
-    .emoji:nth-child(3) { bottom: 5% !important; right: 4% !important; }
-    .emoji:nth-child(4) { top: 7% !important; right: 7% !important; transform: translateX(-50%); }
-    .emoji:nth-child(5) { bottom: 8% !important; right: 41% !important; }
-    .emoji:nth-child(6) { bottom: 39% !important; right: 6% !important; }
-    .emoji:nth-child(7) { bottom: 32% !important; left: 6% !important; }
-    .emoji:nth-child(8) { bottom: 5% !important; left: 11% !important; }
-    .emoji:nth-child(9) { top: 7% !important; right: 47% !important; }
-    .emoji:nth-child(10) { top: 20% !important; left: 57% !important; }
+  .emoji:nth-child(1) {
+    top: 24% !important;
+    left: 9% !important;
+  }
+  .emoji:nth-child(2) {
+    top: 6% !important;
+    left: 10% !important;
+  }
+  .emoji:nth-child(3) {
+    bottom: 5% !important;
+    right: 4% !important;
+  }
+  .emoji:nth-child(4) {
+    top: 7% !important;
+    right: 7% !important;
+    transform: translateX(-50%);
+  }
+  .emoji:nth-child(5) {
+    bottom: 8% !important;
+    right: 41% !important;
+  }
+  .emoji:nth-child(6) {
+    bottom: 39% !important;
+    right: 6% !important;
+  }
+  .emoji:nth-child(7) {
+    bottom: 32% !important;
+    left: 6% !important;
+  }
+  .emoji:nth-child(8) {
+    bottom: 5% !important;
+    left: 11% !important;
+  }
+  .emoji:nth-child(9) {
+    top: 7% !important;
+    right: 47% !important;
+  }
+  .emoji:nth-child(10) {
+    top: 20% !important;
+    left: 57% !important;
+  }
 
-    /* Крестик для возврата */
-    .back-button img {
-        width: 4vw; /* Увеличиваем размер крестика */
-    }
+  .back-button img {
+    width: 4vw;
+  }
 }
 
-/* Для устройств с шириной экрана до 480px (мобильные устройства) */
+/* мобилка */
 @media (max-width: 480px) {
-    /* Текст над прямоугольником */
-    .header-text {
-        font-size: 1rem !important; /* Дальнейшее уменьшение размера текста */
-        margin-bottom: 10px !important; /* Уменьшаем отступ */
-    }
+  .header-text {
+    font-size: 1rem !important;
+    margin-bottom: 10px !important;
+  }
 
-    /* Белый прямоугольник */
-    .center-box {
-        width: 200px !important; /* Дальнейшее уменьшение ширины */
-        height: 100px !important; /* Дальнейшее уменьшение высоты */
-    }
+  .center-box {
+    width: 200px !important;
+    height: 100px !important;
+  }
 
-    /* Текст "STOP" */
-    .stop-text {
-        font-size: 4rem !important; /* Дальнейшее уменьшение размера текста */
-        letter-spacing: 2px !important; /* Уменьшаем расстояние между буквами */
-    }
+  .stop-text {
+    font-size: 4rem !important;
+    letter-spacing: 2px !important;
+  }
 
-    /* Размер лиц */
-    .emoji {
-        width: 18vw !important; /* Увеличиваем относительный размер лиц */
-    }
+  .emoji {
+    width: 18vw !important;
+  }
 
-    
+  .back-button-2 img {
+    width: 5.5vw !important;
+    margin-right: 1vw !important;
+  }
 
-    /* Крестик для возврата */
-    .back-button-2 img {
-        width: 5.5vw !important; /* Дальнейшее увеличение размера крестика */
-        margin-right: 1vw !important;
-    }
-
-    .emoji:nth-child(1) { top: 20% !important; left: 9% !important; }
-    .emoji:nth-child(2) { top: 4% !important; left: 5% !important; }
-    .emoji:nth-child(3) { bottom: 5% !important; right: 4% !important; }
-    .emoji:nth-child(4) { top: 4% !important; right: 7% !important; transform: translateX(-50%); }
-    .emoji:nth-child(5) { bottom: 5% !important; right: 35% !important; }
-    .emoji:nth-child(6) { bottom: 20% !important; right: 15% !important; }
-    .emoji:nth-child(7) { bottom: 21% !important; left: 9% !important; }
-    .emoji:nth-child(8) { bottom: 5% !important; left: 11% !important; }
-    .emoji:nth-child(9) { top: 7% !important; right: 40% !important; }
-    .emoji:nth-child(10) { top: 20% !important; left: 59% !important; }
+  .emoji:nth-child(1) {
+    top: 20% !important;
+    left: 9% !important;
+  }
+  .emoji:nth-child(2) {
+    top: 4% !important;
+    left: 5% !important;
+  }
+  .emoji:nth-child(3) {
+    bottom: 5% !important;
+    right: 4% !important;
+  }
+  .emoji:nth-child(4) {
+    top: 4% !important;
+    right: 7% !important;
+    transform: translateX(-50%);
+  }
+  .emoji:nth-child(5) {
+    bottom: 5% !important;
+    right: 35% !important;
+  }
+  .emoji:nth-child(6) {
+    bottom: 20% !important;
+    right: 15% !important;
+  }
+  .emoji:nth-child(7) {
+    bottom: 21% !important;
+    left: 9% !important;
+  }
+  .emoji:nth-child(8) {
+    bottom: 5% !important;
+    left: 11% !important;
+  }
+  .emoji:nth-child(9) {
+    top: 7% !important;
+    right: 40% !important;
+  }
+  .emoji:nth-child(10) {
+    top: 20% !important;
+    left: 59% !important;
+  }
 }
 
-/* Для экранов с высоким разрешением (например, Retina) */
+/*  высоким разр */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    /* Улучшение качества изображений */
-    .emoji {
-        image-rendering: -webkit-optimize-contrast; /* Для WebKit-браузеров */
-        image-rendering: crisp-edges; /* Для современных браузеров */
-    }
+  .emoji {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
 }
-
 
 /* -------------- Третья страница --------- */
 
-/* Для устройств с шириной экрана до 768px (планшеты и мобильные устройства) */
+/* планшет */
 @media (max-width: 900px) {
-    /* Текст над прямоугольником */
-    .header-text-post {
-        font-size: 1.2rem !important; /* Уменьшаем размер текста */
-        margin-bottom: 3vh !important; /* Уменьшаем отступ */
-    }
+  .header-text-post {
+    font-size: 1.2rem !important;
+    margin-bottom: 3vh !important;
+  }
 
-    /* Белый прямоугольник */
-    .center-box-post {
-        width: 90% !important; /* Увеличиваем относительную ширину */
-        max-width: 300px !important; /* Уменьшаем максимальную ширину */
-        height: 60% !important; /* Уменьшаем высоту */
-    }
+  .center-box-post {
+    width: 90% !important;
+    max-width: 300px !important;
+    height: 60% !important;
+  }
 
-    /* Сердца */
-    .heart {
-        width: 22vw !important; /* Уменьшаем размер сердец */
-    }
+  .heart {
+    width: 22vw !important;
+  }
 
-    /* Позиции для каждого сердца */
-    .heart-1 {
-        top: 3% !important;
-        left: 2% !important;
-        width: 260.6px;
-    }
+  .heart-1 {
+    top: 3% !important;
+    left: 2% !important;
+    width: 260.6px;
+  }
 
-    .heart-2 {
-        top: 19% !important;
-        left: 5% !important;
-        transform: rotate(-23deg);
-        width: 300px;
-    }
+  .heart-2 {
+    top: 19% !important;
+    left: 5% !important;
+    transform: rotate(-23deg);
+    width: 300px;
+  }
 
-    .heart-3 {
-        top: 1% !important;
-        left: 24% !important;
-        width: 189.8px;
-        transform: rotate(30deg);
-    }
+  .heart-3 {
+    top: 1% !important;
+    left: 24% !important;
+    width: 189.8px;
+    transform: rotate(30deg);
+  }
 
-    .heart-4 {
-        top: 39% !important;
-        left: 0% !important;
-        width: 190px;
-        transform: rotate(15deg);
-    }
+  .heart-4 {
+    top: 39% !important;
+    left: 0% !important;
+    width: 190px;
+    transform: rotate(15deg);
+  }
 
-    .heart-5 {
-        top: 59% !important;
-        left: 7% !important;
-        width: 300px;
-        transform: rotate(10deg);
-    }
+  .heart-5 {
+    top: 59% !important;
+    left: 7% !important;
+    width: 300px;
+    transform: rotate(10deg);
+  }
 
-    .heart-6 {
-        top: 77% !important;
-        left: 1% !important;
-        transform: rotate(-25deg);
-        width: 190.8px;
-    }
+  .heart-6 {
+    top: 77% !important;
+    left: 1% !important;
+    transform: rotate(-25deg);
+    width: 190.8px;
+  }
 
-    .heart-7 {
-        bottom: -1% !important;
-        left: 20% !important;
-        transform: rotate(-20deg);
-        width: 262.6px;
-    }
+  .heart-7 {
+    bottom: -1% !important;
+    left: 20% !important;
+    transform: rotate(-20deg);
+    width: 262.6px;
+  }
 
-    .heart-8 {
-        bottom: -2% !important;
-        left: 42% !important;
-        width: 274.2px;
-        transform: rotate(20deg);
-    }
+  .heart-8 {
+    bottom: -2% !important;
+    left: 42% !important;
+    width: 274.2px;
+    transform: rotate(20deg);
+  }
 
-    .heart-9 {
-        top: 4% !important;
-        right: 4% !important;
-        transform: rotate(29deg);
-        width: 261.6px;
-    }
+  .heart-9 {
+    top: 4% !important;
+    right: 4% !important;
+    transform: rotate(29deg);
+    width: 261.6px;
+  }
 
-    .heart-10 {
-        top: 0% !important;
-        right: 25% !important;
-        transform: rotate(-26deg);
-        width: 211.4px;
-    }
+  .heart-10 {
+    top: 0% !important;
+    right: 25% !important;
+    transform: rotate(-26deg);
+    width: 211.4px;
+  }
 
-    .heart-11 {
-        top: 42% !important;
-        right: -3% !important;
-        width: 295.2px;
-        transform: rotate(5deg);
-    }
+  .heart-11 {
+    top: 42% !important;
+    right: -3% !important;
+    width: 295.2px;
+    transform: rotate(5deg);
+  }
 
-    .heart-12 {
-        top: 18% !important;
-        right: -2% !important;
-        width: 163.4px;
-        transform: rotate(34deg);
-    }
+  .heart-12 {
+    top: 18% !important;
+    right: -2% !important;
+    width: 163.4px;
+    transform: rotate(34deg);
+  }
 
-    .heart-13 {
-        bottom: 25% !important;
-        right: 7% !important;
-        width: 191.6px;
-        transform: rotate(-24deg);
-    }
+  .heart-13 {
+    bottom: 25% !important;
+    right: 7% !important;
+    width: 191.6px;
+    transform: rotate(-24deg);
+  }
 
-    .heart-14 {
-        bottom: 10% !important;
-        right: -2% !important;
-        transform: rotate(20deg);
-        width: 249.4px;
-    }
+  .heart-14 {
+    bottom: 10% !important;
+    right: -2% !important;
+    transform: rotate(20deg);
+    width: 249.4px;
+  }
 
-    .heart-15 {
-        transform: rotate(15deg);
-        bottom: 0% !important;
-        right: 12% !important;
-        width: 302.2px;
-    }
+  .heart-15 {
+    transform: rotate(15deg);
+    bottom: 0% !important;
+    right: 12% !important;
+    width: 302.2px;
+  }
 
-    /* Иконки */
-    .icon {
-        width: 20px !important; /* Уменьшаем размер иконок */
-        height: 20px !important;
-    }
+  .icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
 
-    /* Текст рядом с иконками */
-    .icon-text {
-        font-size: 0.8rem !important; /* Уменьшаем размер текста */
-    }
-
+  .icon-text {
+    font-size: 0.8rem !important;
+  }
 }
 
-/* Для устройств с шириной экрана до 480px (мобильные устройства) */
+/* мобилка */
 @media (max-width: 480px) {
-    /* Текст над прямоугольником */
-    .header-text-post {
-        font-size: 1rem !important; /* Дальнейшее уменьшение размера текста */
-        margin-bottom: 2vh !important; /* Уменьшаем отступ */
-    }
+  .header-text-post {
+    font-size: 1rem !important;
+    margin-bottom: 2vh !important;
+  }
 
-    /* Белый прямоугольник */
-    .center-box-post {
-        width: 95% !important; /* Увеличиваем относительную ширину */
-        max-width: 250px !important; /* Дальнейшее уменьшение максимальной ширины */
-        height: 55% !important; /* Дальнейшее уменьшение высоты */
-    }
+  .center-box-post {
+    width: 95% !important;
+    max-width: 250px !important;
+    height: 55% !important;
+  }
 
-    /* Сердца */
-    .heart {
-        width: 25vw !important; /* Увеличиваем относительный размер сердец */
-    }
+  .heart {
+    width: 25vw !important;
+  }
 
+  .heart-1 {
+    top: 5% !important;
+    left: 0% !important;
+    transform: rotate(-13deg) !important;
+    width: 116px !important;
+  }
 
-    /* Позиции для каждого сердца */
-    .heart-1 {
-        top: 5% !important;
-        left: 0% !important;
-        transform: rotate(-13deg) !important;
-        width: 116px !important;
-    }
+  .heart-2 {
+    top: 1% !important;
+    left: 18% !important;
+    transform: rotate(15deg) !important;
+  }
 
-    .heart-2 {
-        top: 1% !important;
-        left: 18% !important;
-        transform: rotate(15deg) !important;
-    }
+  .heart-3 {
+    top: 1% !important;
+    left: 32% !important;
+    width: 155px !important;
+    transform: rotate(13deg) !important;
+  }
 
-    .heart-3 {
-        top: 1% !important;
-        left: 32% !important;
-        width: 155px !important;
-        transform: rotate(13deg) !important;
-    }
+  .heart-4 {
+    top: -1% !important;
+    left: 63% !important;
+    width: 120px !important;
+    transform: rotate(-24deg) !important;
+  }
 
-    .heart-4 {
-        top: -1% !important;
-        left: 63% !important;
-        width: 120px !important;
-        transform: rotate(-24deg) !important;
-    }
+  .heart-5 {
+    top: 11% !important;
+    left: 77% !important;
+    width: 113px !important;
+    transform: rotate(25deg) !important;
+  }
 
-    .heart-5 {
-        top: 11% !important;
-        left: 77% !important;
-        width: 113px !important;
-        transform: rotate(25deg) !important;
-    }
+  .heart-6 {
+    top: 80% !important;
+    left: -1% !important;
+    transform: rotate(3deg) !important;
+    width: 100px !important;
+  }
 
-    .heart-6 {
-        top: 80% !important;
-        left: -1% !important;
-        transform: rotate(3deg) !important;
-        width: 100px !important;
-    }
+  .heart-7 {
+    bottom: -2% !important;
+    left: 4% !important;
+    transform: rotate(-5deg) !important;
+    width: 96.6px !important;
+  }
 
-    .heart-7 {
-        bottom: -2% !important;
-        left: 4% !important;
-        transform: rotate(-5deg) !important;
-        width: 96.6px !important;
-    }
+  .heart-8 {
+    bottom: -2% !important;
+    left: 21% !important;
+    width: 93.2px !important;
+    transform: rotate(4deg) !important;
+  }
 
-    .heart-8 {
-        bottom: -2% !important;
-        left: 21% !important;
-        width: 93.2px !important;
-        transform: rotate(4deg) !important;
-    }
+  .heart-9 {
+    top: 82% !important;
+    right: 29% !important;
+    transform: rotate(11deg) !important;
+    width: 144.6px !important;
+  }
 
-    .heart-9 {
-        top: 82% !important;
-        right: 29% !important;
-        transform: rotate(11deg) !important;
-        width: 144.6px !important;
-    }
+  .heart-10 {
+    top: 89% !important;
+    right: 19% !important;
+    transform: rotate(-10deg) !important;
+    width: 91px !important;
+  }
 
-    .heart-10 {
-        top: 89% !important;
-        right: 19% !important;
-        transform: rotate(-10deg) !important;
-        width: 91px !important;
-    }
+  .heart-11 {
+    top: 82% !important;
+    right: 7% !important;
+    width: 295.2px;
+    transform: rotate(5deg);
+  }
 
-    .heart-11 {
-        top: 82% !important;
-        right: 7% !important;
-        width: 295.2px;
-        transform: rotate(5deg);
-    }
+  .heart-12 {
+    top: 88% !important;
+    right: -4% !important;
+    width: 101.4px !important;
+    transform: rotate(12deg) !important;
+  }
 
-    .heart-12 {
-        top: 88% !important;
-        right: -4% !important;
-        width: 101.4px !important;
-        transform: rotate(12deg) !important;
-    }
+  .heart-13,
+  .heart-14,
+  .heart-15 {
+    display: none !important;
+  }
 
-    .heart-13, .heart-14, .heart-15 {
-        display: none !important;
-    }
+  .icon {
+    width: 18px !important;
+    height: 18px !important;
+  }
 
-
-    /* Иконки */
-    .icon {
-        width: 18px !important; /* Дальнейшее уменьшение размера иконок */
-        height: 18px !important;
-    }
-
-    /* Текст рядом с иконками */
-    .icon-text {
-        font-size: 0.7rem !important; /* Дальнейшее уменьшение размера текста */
-    }
-
+  .icon-text {
+    font-size: 0.7rem !important;
+  }
 }
 
-/* Для экранов с высоким разрешением (например, Retina) */
+/* высоким разр) */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    /* Улучшение качества изображений */
-    .heart, .icon {
-        image-rendering: -webkit-optimize-contrast; /* Для WebKit-браузеров */
-        image-rendering: crisp-edges; /* Для современных браузеров */
-    }
+  .heart,
+  .icon {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
 }
 
 /* -------------- Четвертая страница --------- */
 
-/* Медиа-запросы для различных устройств */
-
-/* Для экранов до 1200px */
+/*  до 1200px */
 @media (max-width: 1200px) {
-    .ex-image {
-        width: 450px !important;
-    }
-    .ex-text {
-        font-size: 1.5rem !important;
-    }
-
+  .ex-image {
+    width: 450px !important;
+  }
+  .ex-text {
+    font-size: 1.5rem !important;
+  }
 }
 
-/* Для экранов до 992px */
+/*  до 992px */
 @media (max-width: 992px) {
-    .ex-image {
-        width: 400px !important;
-    }
-    .ex-text {
-        font-size: 1.3rem !important;
-    }
-    /* .rose {
-        width: 250px !important;
-    } */
-
-
-    
+  .ex-image {
+    width: 400px !important;
+  }
+  .ex-text {
+    font-size: 1.3rem !important;
+  }
 }
 
-/* Для экранов до 768px */
+/*  до 768px */
 @media (max-width: 768px) {
-    .ex-image {
-        width: 350px !important;
-    }
-    .ex-text {
-        font-size: 1.2rem !important;
-    }
-    /* .rose {
-        width: 200px !important;
-    } */
-
-
+  .ex-image {
+    width: 350px !important;
+  }
+  .ex-text {
+    font-size: 1.2rem !important;
+  }
 }
 
 /* Для экранов до 576px */
 @media (max-width: 576px) {
-    .ex-image {
-        width: 280px !important;
-    }
-    .ex-text {
-        font-size: 1rem !important;
-    }
-    /* .rose {
-        width: 200px !important;
-    } */
+  .ex-image {
+    width: 280px !important;
+  }
+  .ex-text {
+    font-size: 1rem !important;
+  }
 }
 
-
-
-/* Скрытие роз на маленьких экранах */
+/* скрытие роз на малэкранах */
 .hide-on-small {
-    display: none;
+  display: none;
 }
 
 @media (min-width: 768px) {
-    .hide-on-small {
-        display: block;
-    }
+  .hide-on-small {
+    display: block;
+  }
 }
 
-
-/* Скрываем лишние розы на планшетах */
+/* скрытие лишних роз на планшетах */
 @media (max-width: 1024px) {
-    .rose-21,
-    .rose-22,
-    .rose-23 {
-        display: none;
-    }
+  .rose-21,
+  .rose-22,
+  .rose-23 {
+    display: none;
+  }
 }
 
-/* Скрываем лишние розы на телефонах */
+/* скрытие лишних роз на мобилке */
 @media (max-width: 768px) {
+  .rose {
+    width: 280px !important;
+  }
 
+  .selected-rose {
+    width: 240px !important;
+  }
 
-    .rose {
-        width: 280px !important;
-    }
+  .rose-1 {
+    top: -2% !important;
+    left: -42% !important;
+    transform: rotate(205deg) !important;
+  }
 
-    .selected-rose {
-        width: 240px !important;
-    }
+  .rose-2 {
+    top: -10% !important;
+    left: -9% !important;
+    transform: rotate(-127deg) !important;
+  }
 
-    .rose-1 {
-        top: -2% !important;
-        left: -42% !important;
-        transform: rotate(205deg) !important;
-    }
+  .rose-3 {
+    top: -10% !important;
+    left: 20% !important;
+    transform: rotate(235deg) !important;
+  }
 
-    .rose-2 {
-        top: -10% !important;
-        left: -9% !important;
-        transform: rotate(-127deg) !important;
-    }
+  .rose-4 {
+    top: -5% !important;
+    right: -30% !important;
+    transform: rotate(269deg) !important;
+  }
 
-    .rose-3 {
-        top: -10% !important;
-        left: 20% !important;
-        transform: rotate(235deg) !important;
-    }
+  .rose-5 {
+    bottom: -3% !important;
+    left: -32% !important;
+    transform: rotate(451deg) !important;
+    top: auto !important;
+  }
 
-    .rose-4 {
-        top: -5% !important;
-        right: -30% !important;
-        transform: rotate(269deg) !important;
-    }
+  .rose-6 {
+    bottom: -10% !important;
+    left: 4% !important;
+    transform: rotate(62deg) !important;
+    top: auto !important;
+  }
 
-    .rose-5 {
-        bottom: -3% !important;
-        left: -32% !important;
-        transform: rotate(451deg) !important;
-        top: auto !important;
+  .rose-7 {
+    bottom: -10% !important;
+    right: -7% !important;
+    transform: rotate(53deg) !important;
+    top: auto !important;
+  }
 
-    }
+  .rose-8 {
+    bottom: -1% !important;
+    right: -40% !important;
+    transform: rotate(24deg) !important;
+  }
 
-    .rose-6 {
-        bottom: -10% !important;
-        left: 4% !important;
-        transform: rotate(62deg) !important;
-        top: auto !important;
-    }
+  .selected-rose-1 {
+    top: 1% !important;
+    left: -27% !important;
+    transform: rotate(205deg) !important;
+  }
 
-    .rose-7 {
-        bottom: -10% !important;
-        right: -7% !important;
-        transform: rotate(53deg) !important;
-        top: auto !important;
+  .selected-rose-2 {
+    top: -7% !important;
+    left: -1% !important;
+    transform: rotate(-127deg) !important;
+  }
 
-    }
+  .selected-rose-3 {
+    top: -7% !important;
+    left: 30% !important;
+    transform: rotate(235deg) !important;
+  }
 
-    .rose-8 {
-        bottom: -1% !important;
-        right: -40% !important;
-        transform: rotate(24deg) !important;    
-    }
+  .selected-rose-4 {
+    top: -3% !important;
+    right: -21% !important;
+    transform: rotate(269deg) !important;
+  }
 
+  .selected-rose-5 {
+    bottom: -1% !important;
+    left: -24% !important;
+    transform: rotate(451deg) !important;
+    top: auto !important;
+  }
 
-    .selected-rose-1 {
-        top: 1% !important;
-        left: -27% !important;
-        transform: rotate(205deg) !important;
-    }
+  .selected-rose-6 {
+    bottom: -8% !important;
+    left: 4% !important;
+    transform: rotate(62deg) !important;
+    top: auto !important;
+  }
 
-    .selected-rose-2 {
-        top: -7% !important;
-        left: -1% !important;
-        transform: rotate(-127deg) !important;
-    }
+  .selected-rose-7 {
+    bottom: -8% !important;
+    right: 4% !important;
+    transform: rotate(53deg) !important;
+    top: auto !important;
+  }
 
-    .selected-rose-3 {
-        top: -7% !important;
-        left: 30% !important;
-        transform: rotate(235deg) !important;
-    }
+  .selected-rose-8 {
+    bottom: -1% !important;
+    right: -24% !important;
+    transform: rotate(24deg) !important;
+  }
 
-    .selected-rose-4 {
-        top: -3% !important;
-        right: -21% !important;
-        transform: rotate(269deg) !important;
-    }
-
-    .selected-rose-5 {
-        bottom: -1% !important;
-        left: -24% !important;
-        transform: rotate(451deg) !important;
-        top: auto !important;
-
-    }
-
-    .selected-rose-6 {
-        bottom: -8% !important;
-        left: 4% !important;
-        transform: rotate(62deg) !important;
-        top: auto !important;
-    }
-
-    .selected-rose-7 {
-        bottom: -8% !important;
-        right: 4% !important;
-        transform: rotate(53deg) !important;
-        top: auto !important;
-
-    }
-
-    .selected-rose-8 {
-        bottom: -1% !important;
-        right: -24% !important;
-        transform: rotate(24deg) !important; 
-    }
-
-    .rose-9,
-    .rose-10,
-    .rose-11,
-    .rose-12,
-    .rose-13,
-    .rose-14,
-    .rose-15,
-    .rose-16,
-    .rose-17,
-    .rose-18,
-    .rose-19,
-    .rose-20,
-    .rose-21,
-    .rose-22,
-    .rose-23,
-    
-    .selected-rose-9,
-    .selected-rose-10,
-    .selected-rose-11,
-    .selected-rose-12,
-    .selected-rose-13,
-    .selected-rose-14,
-    .selected-rose-15,
-    .selected-rose-16,
-    .selected-rose-17,
-    .selected-rose-18,
-    .selected-rose-19,
-    .selected-rose-20,
-    .selected-rose-21,
-    .selected-rose-22,
-    .selected-rose-23
-     {
-        display: none;
-    }
+  .rose-9,
+  .rose-10,
+  .rose-11,
+  .rose-12,
+  .rose-13,
+  .rose-14,
+  .rose-15,
+  .rose-16,
+  .rose-17,
+  .rose-18,
+  .rose-19,
+  .rose-20,
+  .rose-21,
+  .rose-22,
+  .rose-23,
+  .selected-rose-9,
+  .selected-rose-10,
+  .selected-rose-11,
+  .selected-rose-12,
+  .selected-rose-13,
+  .selected-rose-14,
+  .selected-rose-15,
+  .selected-rose-16,
+  .selected-rose-17,
+  .selected-rose-18,
+  .selected-rose-19,
+  .selected-rose-20,
+  .selected-rose-21,
+  .selected-rose-22,
+  .selected-rose-23 {
+    display: none;
+  }
 }

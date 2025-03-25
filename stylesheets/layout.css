@@ -1,1009 +1,970 @@
-/* Новые элементы */
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    opacity: 0;
-    transition: opacity 1s;
-    z-index: 10;
-    pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .text-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2.5vw;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 1s;
-    z-index: 11;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.5vw;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 11;
 }
 
 .typed-text {
-    display: inline-block;
-    z-index: 100;
+  display: inline-block;
+  z-index: 100;
 }
 
 .pulse {
-    animation: pulse 2s infinite;
-    cursor: pointer;
+  animation: pulse 2s infinite;
+  cursor: pointer;
 }
 
-/* Затемнение рук */
+/* затемнение рук */
 .hands.dimmed {
-    filter: brightness(0.5); /* Уменьшаем яркость */
+  filter: brightness(0.5);
 }
 
 .face.dimmed {
-    filter: brightness(0.5); /* Уменьшаем яркость */
+  filter: brightness(0.5);
 }
 
 .mouth.dimmed {
-    filter: brightness(0.5); /* Уменьшаем яркость */
-    
+  filter: brightness(0.5);
 }
 
 #hands {
-    pointer-events: none;
-    cursor: default;
+  pointer-events: none;
+  cursor: default;
 }
 
-
-
-/* Пульсация рта */
 .pulse-mouth {
-    animation: pulseMouth 2s infinite;
-    cursor: pointer;
+  animation: pulseMouth 2s infinite;
+  cursor: pointer;
 }
 
-/* Пульсация лица */
 .pulse-face {
-    animation: pulse 2s infinite;
-    cursor: pointer;
+  animation: pulse 2s infinite;
+  cursor: pointer;
 }
 
-
-/* Существующие стили */
 body {
-    margin: 0;
-    padding: 0;
-    overflow-y: hidden;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
-.face, .mouth, .hands {
-    position: absolute;
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s; /* Для плавности */
+.face,
+.mouth,
+.hands {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s;
 }
 
 .face {
-    top: 0;
-    right: 0;
-    width: 35vw;
+  top: 0;
+  right: 0;
+  width: 35vw;
 }
 
 .mouth {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 35vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35vw;
 }
 
 .hands {
-    bottom: 0;
-    left: 0;
-    width: 35vw;
-    z-index: 5; /* Чтобы не перекрывал оверлей */
+  bottom: 0;
+  left: 0;
+  width: 35vw;
+  z-index: 5;
 }
 
-/* Общие стили для страниц */
+/* общ стили для страниц */
 .page {
-    display: none; /* Все страницы скрыты по умолчанию */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  display: none; /* скрыты по умолчанию */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-/* Активная страница */
 .page.active {
-    display: block; /* Показываем активную страницу */
+  display: block; /* показ  страницу */
 }
 
 .page-1 {
-    height: 100vh;
-    background-image: url('../images/main_background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
+  height: 100vh;
+  background-image: url("../images/main_background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 /* --------------- Page 2 --------------- */
 
 .page-2 {
-    background-image: url('../images/second_background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-family: 'Lostar', sans-serif;
-    text-align: center; /* Центрируем текст */
-    height: 100vh;
-    position: relative; /* Для позиционирования лиц */
+  background-image: url("../images/second_background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Lostar", sans-serif;
+  text-align: center;
+  height: 100vh;
+  position: relative;
 }
 
 .page-2-container {
-    display: flex;
-    flex-direction: column; /* Размещаем элементы по вертикали */
-    justify-content: center;
-    align-items: center;
-    font-family: 'Lostar', sans-serif;
-    text-align: center; /* Центрируем текст */
-    height: 100vh;
-    position: relative; /* Для позиционирования лиц */
-    overflow: hidden; /* Скрываем выходящие за пределы экрана элементы */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lostar", sans-serif;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
-
-/* Текст над прямоугольником */
 .header-text {
-    font-size: 1.5rem; /* Размер текста */
-    color: white; /* Цвет текста */
-    margin-bottom: 20px; /* Отступ снизу */
-    line-height: 1.5; /* Интервал между строками */
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Тень для лучшей читаемости */
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Белый прямоугольник */
 .center-box {
-    width: 300px; /* Ширина прямоугольника */
-    height: 150px; /* Высота прямоугольника */
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px; /* Скругление углов */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень */
-    cursor: pointer;
-    position: relative; /* Для z-index */
-    z-index: 10; /* Чтобы прямоугольник был поверх лиц */
+  width: 300px;
+  height: 150px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
 }
 
-/* Текст "STOP" */
 .stop-text {
-    font-size: 7.2rem; /* Размер текста */
-    color: blue;
-    text-transform: uppercase; /* Все буквы заглавные */
-    letter-spacing: 5px; /* Расстояние между буквами */
+  font-size: 7.2rem;
+  color: blue;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
-/* Контейнер для лиц */
 .faces-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Чтобы лица не мешали взаимодействию с прямоугольником */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Стили для лиц */
 .emoji {
-    position: absolute;
-    width: 11vw; /* Фиксированный размер лиц */
-    height: auto; /* Сохраняем пропорции */
-    pointer-events: auto; /* Возвращаем возможность клика */
-    transition: transform 0.5s ease; /* Плавная анимация вращения */
+  position: absolute;
+  width: 11vw;
+  height: auto;
+  pointer-events: auto;
+  transition: transform 0.5s ease;
 }
 
-/* Пример позиционирования лиц */
-.emoji:nth-child(1) { top: 8%; left: 5%; }
-.emoji:nth-child(2) { top: 4%; left: 34%; }
-.emoji:nth-child(3) { bottom: 5%; right: 4%; }
-.emoji:nth-child(4) { top: 10%; right: 5%; transform: translateX(-50%); }
-.emoji:nth-child(5) { bottom: 7%; right: 29%; }
-.emoji:nth-child(6) { bottom: 30%; right: 15%; }
-.emoji:nth-child(7) { bottom: 10%; left: 6%; }
-.emoji:nth-child(8) { bottom: 4%; left: 35%; }
-.emoji:nth-child(9) { top: 5%; right: 24%; }
-.emoji:nth-child(10) { top: 36%; left: 20%; }
+.emoji:nth-child(1) {
+  top: 8%;
+  left: 5%;
+}
+.emoji:nth-child(2) {
+  top: 4%;
+  left: 34%;
+}
+.emoji:nth-child(3) {
+  bottom: 5%;
+  right: 4%;
+}
+.emoji:nth-child(4) {
+  top: 10%;
+  right: 5%;
+  transform: translateX(-50%);
+}
+.emoji:nth-child(5) {
+  bottom: 7%;
+  right: 29%;
+}
+.emoji:nth-child(6) {
+  bottom: 30%;
+  right: 15%;
+}
+.emoji:nth-child(7) {
+  bottom: 10%;
+  left: 6%;
+}
+.emoji:nth-child(8) {
+  bottom: 4%;
+  left: 35%;
+}
+.emoji:nth-child(9) {
+  top: 5%;
+  right: 24%;
+}
+.emoji:nth-child(10) {
+  top: 36%;
+  left: 20%;
+}
 
-/* Крестик для возврата */
 .back-button-2 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 5vh;
-    margin-right: 3vw;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    z-index: 20; /* Чтобы быть поверх всех элементов */
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Для лучшей видимости */
-    opacity: 0; /* Скрываем крестик */
-    visibility: hidden; /* Дополнительно скрываем */
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* Плавное появление */
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 5vh;
+  margin-right: 3vw;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 20;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .back-button-2 img {
-    width: 2.5vw;
+  width: 2.5vw;
 }
 
-/* Крестик становится видимым */
 .back-button-2.visible {
-    opacity: 1;
-    visibility: visible;
-
+  opacity: 1;
+  visibility: visible;
 }
 
-/* Изменение цвета прямоугольника и текста */
 .center-box.stopped {
-    background-color: blue; /* Синий фон */
+  background-color: blue;
 }
 
 .center-box.stopped .stop-text {
-    color: black; /* Черный текст */
+  color: black;
 }
 
-/* Стиль для остановленного эмодзи */
 .emoji.stopped {
-    animation: none !important; /* Отключаем любые анимации */
-    transform: rotate(0deg) !important; /* Устанавливаем начальное положение */
+  animation: none !important;
+  transform: rotate(0deg) !important;
 }
 
-/* Анимация возврата в исходное положение */
 .return-to-origin {
-    animation: returnToOrigin 1s ease-in-out forwards;
+  animation: returnToOrigin 1s ease-in-out forwards;
 }
 
 /* -------- Page 3 ------------ */
 
 .page-3 {
-    height: 100vh;
-    background-image: url('../images/second_background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    font-family: 'FiraSans', sans-serif;
+  height: 100vh;
+  background-image: url("../images/second_background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  font-family: "FiraSans", sans-serif;
 }
 
 .page-3-container {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
 }
 
-/* Крестик для возврата */
 .back-button-3 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 3.5vh;
-    margin-right: 2vw;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    z-index: 20; /* Чтобы быть поверх всех элементов */
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Для лучшей видимости */
-    opacity: 0; /* Скрываем крестик */
-    visibility: hidden; /* Дополнительно скрываем */
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* Плавное появление */
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 3.5vh;
+  margin-right: 2vw;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 20;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .back-button-3 img {
-    width: 2.5vw;
+  width: 2.5vw;
 }
 
-/* Крестик становится видимым */
 .back-button-3.visible {
-    opacity: 1;
-    visibility: visible;
-
+  opacity: 1;
+  visibility: visible;
 }
 
-/* Текст над прямоугольником */
 .header-text-post {
-    font-size: 1.5rem; /* Размер текста */
-    color: white; /* Цвет текста */
-    margin-bottom: 4vh; /* Отступ снизу */
-    line-height: 1.5; /* Интервал между строками */
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Тень для лучшей читаемости */
-    text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 4vh;
+  line-height: 1.5;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
-/* Белый прямоугольник */
 .center-box-post {
-    width: 70%; /* Адаптивная ширина */
-    max-width: 340px; /* Максимальная ширина */
-    height: 70%; /* Адаптивная высота */
-    background-color: white;
-    display: flex;
-    flex-direction: column; /* Размещаем элементы вертикально */
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень */
-    position: relative; /* Для z-index */
-    box-sizing: border-box; /* Учитываем padding в размерах */
+  width: 70%;
+  max-width: 340px;
+  height: 70%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  box-sizing: border-box;
 }
 
 .center-box-post img {
-    animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
 }
 
-/* Верхний контейнер */
 .upper-container {
-    display: flex;
-    align-items: center; /* Выравнивание по центру по вертикали */
-    justify-content: space-between; /* Распределение элементов */
-    width: 100%; /* Занимает всю ширину родителя */
-    padding: 10px 0; /* Отступы сверху и снизу */
-    border-bottom: 1px solid black; /* Линия под контейнером */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
 }
 
-/* Серый кружок */
 .avatar {
-    width: 40px; /* Ширина кружка */
-    height: 40px; /* Высота кружка */
-    background-color: #D9D9D9;
-    border-radius: 50%; /* Делаем круглым */
-    margin-right: 10px; /* Отступ справа */
-    margin-left: 0.5vw;
+  width: 40px;
+  height: 40px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 0.5vw;
 }
 
-/* Если нужно добавить стили для изображения */
 .avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Обеспечивает корректное масштабирование */
-    border-radius: 50%; /* Делаем круглым */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-/* Текстовое поле */
 .username-input {
-    flex-grow: 1; /* Занимает оставшееся пространство */
-    height: 40px; /* Высота поля */
-    border: none; /* Убираем границу */
-    background-color: transparent; /* Прозрачный фон */
-    font-size: 0.8rem; /* Размер текста */
-    outline: none; /* Убираем обводку при фокусе */
-    color: black; /* Цвет текста */
-    margin-right: 10px; /* Отступ справа */
+  flex-grow: 1;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  font-size: 0.8rem;
+  outline: none;
+  color: black;
+  margin-right: 10px;
 }
 
-/* Подсказка (placeholder) */
 .username-input::placeholder {
-    color: #ccc; /* Цвет подсказки */
+  color: #ccc;
 }
 
-/* Контейнер для трех точек */
 .dots {
-    display: flex;
-    gap: 5px; /* Расстояние между точками */
-    margin-right: 1.5vw;
-    cursor: pointer;
+  display: flex;
+  gap: 5px;
+  margin-right: 1.5vw;
+  cursor: pointer;
 }
 
-/* Точки */
 .dot {
-    width: 3px; /* Размер точки */
-    height: 3px; /* Размер точки */
-    background-color: black; /* Цвет точки */
-    border-radius: 50%; /* Делаем круглой */
+  width: 3px;
+  height: 3px;
+  background-color: black;
+  border-radius: 50%;
 }
 
-/* Центральный контейнер */
 .center-container {
-    flex-grow: 1; /* Занимает оставшееся пространство */
-    display: flex;
-    justify-content: center; /* Выравнивание по центру по горизонтали */
-    align-items: center; /* Выравнивание по центру по вертикали */
-    width: 100%; /* Занимает всю ширину родителя */
-    height: 100px; /* Минимальная высота */
-    border-bottom: 1px solid black; /* Линия под контейнером */
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid black;
 }
 
-/* Стиль для изображения в центральном контейнере */
 .center-container img {
-    width: 100%; /* ширина изображения */
-    height: 100%; /* высота изображения */
+  width: 100%;
+  height: 100%;
 }
 
-/* Нижний контейнер */
 .lower-container {
-    display: flex;
-    align-items: center; /* Выравнивание по центру по вертикали */
-    justify-content: space-between; /* Распределение элементов */
-    width: 100%; /* Занимает всю ширину родителя */
-    padding: 7px 0; /* Отступы сверху и снизу */
-    border-top: 1px solid black; /* Линия над контейнером */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 7px 0;
+  border-top: 1px solid black;
 }
 
-/* Левый блок (три иконки с текстами) */
 .left-icons {
-    display: flex;
-    align-items: center; /* Выравнивание по центру */
-    gap: 15px; /* Расстояние между группами иконок */
-    margin-left: 0.5vw;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 0.5vw;
 }
 
-/* Иконки */
 .icon {
-    width: 25px; /* Унифицированный размер иконки */
-    height: 25px; /* Унифицированный размер иконки */
-    cursor: pointer;
-    vertical-align: middle; /* Выравнивание по центру относительно текста */
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  vertical-align: middle;
 }
 
-/* Текст рядом с иконками */
 .icon-text {
-    font-size: 0.9rem; /* Размер текста */
-    color: black; /* Цвет текста */
-    line-height: 1; /* Убираем лишний интервал между строками */
-    vertical-align: middle; /* Выравнивание по центру относительно иконки */
+  font-size: 0.9rem;
+  color: black;
+  line-height: 1;
+  vertical-align: middle;
 }
 
-/* Группа иконок (лайки, комментарии, отправка) */
 .icon-group {
-    display: flex;
-    align-items: center; /* Выравнивание по центру */
-    gap: 5px; /* Расстояние между иконкой и текстом */
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-/* Правый блок (иконка закладки) */
 .right-icon {
-    margin-right: 1vw; /* Отступ справа */
+  margin-right: 1vw;
 }
 
 .comment {
-    width: 21px;
-    height: 21px;
+  width: 21px;
+  height: 21px;
 }
 
-
-/* Контейнер для сердец */
 .hearts-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Чтобы сердца не мешали взаимодействию с другими элементами */
-    z-index: 0; /* Размещаем сердца под основным контентом */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
 
-/* Общие стили для сердец */
 .heart {
-    position: absolute;
-    pointer-events: none; /* Отключаем взаимодействие */
-    display: block;
+  position: absolute;
+  pointer-events: none;
+  display: block;
 }
 
-/* Позиции для каждого сердца */
 .heart-1 {
-    top: 0%;
-    left: 1%;
-    width: 260.6px;
+  top: 0%;
+  left: 1%;
+  width: 260.6px;
 }
 
 .heart-2 {
-    top: 19%;
-    left: 13%;
-    transform: rotate(-23deg);
-    width: 300px;
+  top: 19%;
+  left: 13%;
+  transform: rotate(-23deg);
+  width: 300px;
 }
 
 .heart-3 {
-    top: 2%;
-    left: 19%;
-    width: 189.8px;
-    transform: rotate(30deg);
+  top: 2%;
+  left: 19%;
+  width: 189.8px;
+  transform: rotate(30deg);
 }
 
 .heart-4 {
-    top: 31%;
-    left: 0%;
-    width: 190px;
-    transform: rotate(15deg);
+  top: 31%;
+  left: 0%;
+  width: 190px;
+  transform: rotate(15deg);
 }
 
 .heart-5 {
-    top: 48%;
-    left: 2%;
-    width: 300px;
-    transform: rotate(10deg);
+  top: 48%;
+  left: 2%;
+  width: 300px;
+  transform: rotate(10deg);
 }
 
 .heart-6 {
-    top: 47%;
-    left: 22%;
-    transform: rotate(-25deg);
-    width: 190.8px;
+  top: 47%;
+  left: 22%;
+  transform: rotate(-25deg);
+  width: 190.8px;
 }
 
 .heart-7 {
-    bottom: -3%;
-    left: 0%;
-    transform: rotate(-20deg);
-    width: 262.6px;
+  bottom: -3%;
+  left: 0%;
+  transform: rotate(-20deg);
+  width: 262.6px;
 }
 
 .heart-8 {
-    bottom: -4%;
-    left: 16%;
-    width: 274.2px;
-    transform: rotate(20deg);
+  bottom: -4%;
+  left: 16%;
+  width: 274.2px;
+  transform: rotate(20deg);
 }
 
 .heart-9 {
-    top: 0%;
-    right: 4%;
-    transform: rotate(29deg);
-    width: 261.6px;
+  top: 0%;
+  right: 4%;
+  transform: rotate(29deg);
+  width: 261.6px;
 }
 
 .heart-10 {
-    top: 9%;
-    right: 18%;
-    transform: rotate(-26deg);
-    width: 211.4px;
+  top: 9%;
+  right: 18%;
+  transform: rotate(-26deg);
+  width: 211.4px;
 }
 
 .heart-11 {
-    top: 28%;
-    right: 6%;
-    width: 295.2px;
-    transform: rotate(5deg);
+  top: 28%;
+  right: 6%;
+  width: 295.2px;
+  transform: rotate(5deg);
 }
 
 .heart-12 {
-    top: 24%;
-    right: -1%;
-    width: 163.4px;
-    transform: rotate(34deg);
+  top: 24%;
+  right: -1%;
+  width: 163.4px;
+  transform: rotate(34deg);
 }
 
 .heart-13 {
-    bottom: 29%;
-    right: 19%;
-    width: 191.6px;
-    transform: rotate(-24deg);
+  bottom: 29%;
+  right: 19%;
+  width: 191.6px;
+  transform: rotate(-24deg);
 }
 
 .heart-14 {
-    bottom: 16%;
-    right: -2%;
-    transform: rotate(20deg);
-    width: 249.4px;
+  bottom: 16%;
+  right: -2%;
+  transform: rotate(20deg);
+  width: 249.4px;
 }
 
 .heart-15 {
-    transform: rotate(15deg);
-    bottom: -5%;
-    right: 9%;
-    width: 302.2px;
+  transform: rotate(15deg);
+  bottom: -5%;
+  right: 9%;
+  width: 302.2px;
 }
 
 /* ----------- Page 4 ------------ */
 .page-4 {
-    height: 100vh;
-    background-image: url('../images/second_background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-family: 'FiraSans', sans-serif;
-    text-align: center; /* Центрируем текст */
-    overflow-y: hidden;
-    overflow-x: hidden;
+  height: 100vh;
+  background-image: url("../images/second_background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "FiraSans", sans-serif;
+  text-align: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
-
-
-/* Крестик для возврата */
 .back-button-4 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 3.5vh;
-    margin-right: 2vw;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    z-index: 20; /* Чтобы быть поверх всех элементов */
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Для лучшей видимости */
-    opacity: 0; /* Скрываем крестик */
-    visibility: hidden; /* Дополнительно скрываем */
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* Плавное появление */
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 3.5vh;
+  margin-right: 2vw;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 20;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .back-button-4 img {
-    width: 2.5vw;
+  width: 2.5vw;
 }
 
-/* Крестик становится видимым */
 .back-button-4.visible {
-    opacity: 1;
-    visibility: visible;
-
+  opacity: 1;
+  visibility: visible;
 }
 
 .back-button-4 img {
-    width: 2.5vw;
+  width: 2.5vw;
 }
 
-/* Крестик становится видимым */
 .back-button-4.visible {
-    opacity: 1;
-    visibility: visible;
-
+  opacity: 1;
+  visibility: visible;
 }
 
-
-/* Контейнер для роз */
 .roses-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1; /* Размещаем розы под основным контентом */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
-/* Общие стили для роз */
 .rose {
-    position: absolute;
-    width: 370px; /* Размер роз */
-    /* height: 50px; Размер роз */
-    cursor: pointer;
+  position: absolute;
+  width: 370px;
+
+  cursor: pointer;
 }
 
-
-/* Коллажные розы */
 .selected-rose {
-    position: absolute;
-    width: 300px;
-    opacity: 0; /* Скрытые по умолчанию */
-    transition: opacity 0.3s ease; /* Плавное появление */
-    z-index: 2; /* Коллажная роза ниже синей */
+  position: absolute;
+  width: 300px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
 }
 
-
-/* Позиции для каждой розы */
 .rose-1 {
-    top: -5%;
-    left: 2%;
-    transform: rotate(181deg);
+  top: -5%;
+  left: 2%;
+  transform: rotate(181deg);
 }
 
 .rose-2 {
-    top: -18%;
-    left: 14%;
-    transform: rotate(-155deg);
+  top: -18%;
+  left: 14%;
+  transform: rotate(-155deg);
 }
 
 .rose-3 {
-    top: -24%;
-    left: 40%;
-    transform: rotate(227deg);
+  top: -24%;
+  left: 40%;
+  transform: rotate(227deg);
 }
 
 .rose-4 {
-    top: -22%;
-    right: 17%;
-    transform: rotate(259deg);
+  top: -22%;
+  right: 17%;
+  transform: rotate(259deg);
 }
 
 .rose-5 {
-    top: -9%;
-    right: 5%;
-    transform: rotate(277deg);
+  top: -9%;
+  right: 5%;
+  transform: rotate(277deg);
 }
 
 .rose-6 {
-    top: 35%;
-    right: -2%;
-    transform: rotate(331deg);
+  top: 35%;
+  right: -2%;
+  transform: rotate(331deg);
 }
 
 .rose-7 {
-    bottom: 9%;
-    right: -2%;
-    transform: rotate(-11deg);
+  bottom: 9%;
+  right: -2%;
+  transform: rotate(-11deg);
 }
 
 .rose-8 {
-    bottom: -11%;
-    right: 5%;
-    transform: rotate(14deg);
+  bottom: -11%;
+  right: 5%;
+  transform: rotate(14deg);
 }
 
 .rose-9 {
-    bottom: -24%;
-    right: 18%;
-    transform: rotate(43deg);
+  bottom: -24%;
+  right: 18%;
+  transform: rotate(43deg);
 }
 
 .rose-10 {
-    bottom: -28%;
-    right: 32%;
-    transform: rotate(55deg);
+  bottom: -28%;
+  right: 32%;
+  transform: rotate(55deg);
 }
 
 .rose-11 {
-    bottom: -13%;
-    left: 13%;
-    transform: rotate(85deg)
+  bottom: -13%;
+  left: 13%;
+  transform: rotate(85deg);
 }
 
 .rose-12 {
-    bottom: 2%;
-    left: 1%;
-    transform: rotate(115deg);
+  bottom: 2%;
+  left: 1%;
+  transform: rotate(115deg);
 }
 
 .rose-13 {
-    top: 40%;
-    left: -2%;
-    transform: rotate(142deg);
+  top: 40%;
+  left: -2%;
+  transform: rotate(142deg);
 }
 
 .rose-14 {
-    top: 16%;
-    left: -1%;
-    transform: rotate(167deg);
+  top: 16%;
+  left: -1%;
+  transform: rotate(167deg);
 }
 
 .rose-15 {
-    bottom: 29%;
-    right: -6%;
-    transform: rotate(-34deg);
+  bottom: 29%;
+  right: -6%;
+  transform: rotate(-34deg);
 }
 
 .rose-16 {
-    bottom: 34%;
-    left: -12%;
-    transform: rotate(142deg);
+  bottom: 34%;
+  left: -12%;
+  transform: rotate(142deg);
 }
 
 .rose-17 {
-    bottom: 84%;
-    left: 45%;
-    transform: rotate(222deg);
+  bottom: 84%;
+  left: 45%;
+  transform: rotate(222deg);
 }
 
 .rose-18 {
-    bottom: -24%;
-    left: 26%;
-    transform: rotate(73deg);
+  bottom: -24%;
+  left: 26%;
+  transform: rotate(73deg);
 }
 
 .rose-19 {
-    top: -24%;
-    left: 28%;
-    transform: rotate(-135deg);
+  top: -24%;
+  left: 28%;
+  transform: rotate(-135deg);
 }
 
 .rose-20 {
-    top: 13%;
-    right: 0%;
-    transform: rotate(-53deg);
+  top: 13%;
+  right: 0%;
+  transform: rotate(-53deg);
 }
 
-/* Позиции для каждой розы */
 .selected-rose-1 {
-    top: -10%;
-    left: 1%;
-    transform: rotate(181deg);
+  top: -10%;
+  left: 1%;
+  transform: rotate(181deg);
 }
 
 .selected-rose-2 {
-    top: -16%;
-    left: 18%;
-    transform: rotate(-155deg);
+  top: -16%;
+  left: 18%;
+  transform: rotate(-155deg);
 }
 
 .selected-rose-3 {
-    top: -20%;
-    left: 45%;
-    transform: rotate(227deg);
+  top: -20%;
+  left: 45%;
+  transform: rotate(227deg);
 }
 
 .selected-rose-4 {
-    top: -18%;
-    right: 19%;
-    transform: rotate(256deg);
-
+  top: -18%;
+  right: 19%;
+  transform: rotate(256deg);
 }
 
 .selected-rose-5 {
-    top: -7%;
-    right: 7%;
-    transform: rotate(277deg);
+  top: -7%;
+  right: 7%;
+  transform: rotate(277deg);
 }
 
 .selected-rose-6 {
-    top: 37%;
-    right: 3%;
-    transform: rotate(321deg);
+  top: 37%;
+  right: 3%;
+  transform: rotate(321deg);
 }
 
 .selected-rose-7 {
-    bottom: 6%;
-    right: 1%;
-    transform: rotate(-15deg);
+  bottom: 6%;
+  right: 1%;
+  transform: rotate(-15deg);
 }
 
 .selected-rose-8 {
-    bottom: -9%;
-    right: 9%;
-    transform: rotate(3deg);
+  bottom: -9%;
+  right: 9%;
+  transform: rotate(3deg);
 }
 
 .selected-rose-9 {
-    bottom: -21%;
-    right: 23%;
-    transform: rotate(38deg);
+  bottom: -21%;
+  right: 23%;
+  transform: rotate(38deg);
 }
 
 .selected-rose-10 {
-    bottom: -19%;
-    right: 36%;
-    transform: rotate(55deg);
+  bottom: -19%;
+  right: 36%;
+  transform: rotate(55deg);
 }
 
 .selected-rose-11 {
-    bottom: -9%;
-    left: 17%;
-    transform: rotate(81deg);
+  bottom: -9%;
+  left: 17%;
+  transform: rotate(81deg);
 }
 
 .selected-rose-12 {
-    bottom: 5%;
-    left: 4%;
-    transform: rotate(104deg);
+  bottom: 5%;
+  left: 4%;
+  transform: rotate(104deg);
 }
 
 .selected-rose-13 {
-    top: 39%;
-    left: 2%;
-    transform: rotate(130deg);
+  top: 39%;
+  left: 2%;
+  transform: rotate(130deg);
 }
 
 .selected-rose-14 {
-    top: 14%;
-    left: 4%;
-    transform: rotate(167deg);
+  top: 14%;
+  left: 4%;
+  transform: rotate(167deg);
 }
 
 .selected-rose-15 {
-    bottom: 29%;
-    right: 1%;
-    transform: rotate(-34deg);
+  bottom: 29%;
+  right: 1%;
+  transform: rotate(-34deg);
 }
 
 .selected-rose-16 {
-    bottom: 37%;
-    left: -3%;
-    transform: rotate(142deg);
+  bottom: 37%;
+  left: -3%;
+  transform: rotate(142deg);
 }
 
 .selected-rose-17 {
-    bottom: 84%;
-    left: 45%;
-    transform: rotate(222deg);
+  bottom: 84%;
+  left: 45%;
+  transform: rotate(222deg);
 }
 
 .selected-rose-18 {
-    bottom: -18%;
-    left: 28%;
-    transform: rotate(70deg);
+  bottom: -18%;
+  left: 28%;
+  transform: rotate(70deg);
 }
 
 .selected-rose-19 {
-    top: -20%;
-    left: 33%;
-    transform: rotate(-135deg);
+  top: -20%;
+  left: 33%;
+  transform: rotate(-135deg);
 }
 
 .selected-rose-20 {
-    top: 14%;
-    right: 1%;
-    transform: rotate(-66deg);
+  top: 14%;
+  right: 1%;
+  transform: rotate(-66deg);
 }
 
-/* Эффект наведения */
 .rose-wrapper:hover .rose {
-    opacity: 0; /* Скрываем синюю розу */
+  opacity: 0;
 }
 
 .rose-wrapper:hover .selected-rose {
-    opacity: 1; /* Показываем коллажную розу */
+  opacity: 1;
 }
 
-
-/* Центральный контент */
 .center-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1; /* Размещаем поверх роз */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
 }
 
-/* Изображение EX */
 .ex-image {
-    width: 510px; /* Размер изображения */
-    height: auto; /* Сохраняем пропорции */
-    margin-bottom: 110px; /* Отступ между изображением и текстом */
-    transition: opacity 0.3s ease; /* Плавное изменение прозрачности */
-    cursor: pointer;
+  width: 510px;
+  height: auto;
+  margin-bottom: 110px;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 
-/* Текст */
 .ex-text {
-    position: fixed;
-    font-size: 1.8rem;
-    color: white;
-    line-height: 1.5;
-    left: 50%;
-    width: 100vw;
-    top: 50%;
-    margin-top: 13vh;
-    transform: translate(-50%, 50%);
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Для лучшей видимости */
-    z-index: 1;
+  position: fixed;
+  font-size: 1.8rem;
+  color: white;
+  line-height: 1.5;
+  left: 50%;
+  width: 100vw;
+  top: 50%;
+  margin-top: 13vh;
+  transform: translate(-50%, 50%);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
-
-/* Затемнение фона */
 .final-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный фон */
-    opacity: 0; /* Начальная прозрачность */
-    visibility: hidden; /* Скрыт по умолчанию */
-    transition: opacity 1s ease, visibility 1s ease; /* Плавное появление */
-    z-index: 100; /* Выше всех элементов */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+  z-index: 100;
 }
 
-/* Финальная надпись */
 .final-text {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2rem;
-    text-align: center;
-    opacity: 0; /* Начальная прозрачность */
-    visibility: hidden; /* Скрыт по умолчанию */
-    transition: opacity 1s ease, visibility 1s ease; /* Плавное появление */
-    z-index: 101; /* Выше затемнения */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+  z-index: 101;
 }
 
-/* Показ затемнения и текста */
 .final-overlay.visible,
 .final-text.visible {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
